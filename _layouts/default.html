@@ -8,11 +8,13 @@
     {%- include header.html -%}
     {%- include banners.html -%}
 
+    {% unless page.hideContent %}
     <main class="page-content" aria-label="Content">
         <div class="wrapper">
             {{ content }}
         </div>
     </main>
+    {% endunless %}
 
     {%- include footer.html -%}
     <script type="application/javascript" src="{{ 'assets/main.js' | relative_url }}"></script>

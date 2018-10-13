@@ -1,6 +1,0 @@
----
----
-
-document.querySelectorAll('.banner').forEach(() => {
-    
-})

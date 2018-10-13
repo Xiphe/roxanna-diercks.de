@@ -1,18 +1,39 @@
 ---
 layout: page
+hideContent: true
 banners:
   - size: full
-    # h1: Let's create your story
-    h2: Let's create your story!!!
-    replace: create
-    with:
-      - reinvent
-      - write
-      - define
-      - share
+    level: 1
+    content: Lassen sie uns ihre Geschichte $
+    list:
+      - kreieren
+      - fortschreiben
+      - erzälen
+      - definieren
+      - teilen
     image: assets/roxanna_hartig.jpg
+  - size: half
+    level: 2
+    content: Auf $
+    list:
+      - Social Media
+      - Events
+      - Festivals
+      - Messen
+      - Incentives
+      - Road-Shows
+      - ihrem Blog
+      - Newslettern
+      - Webinaren
+      - ihrer Webseite
+  - size: half
+    level: 2
+    content: Ich bin spezialisiert auf $
+    list:
+      - Texten
+      - Organisation
+      - Vermarktung
+      - Konzeption
+      - Strategie
+      - Umsetzung
 ---
-
-## Mein Angebot
-
-Einer der wichtigsten Bausteine für erfolgreiches Marketing sind gute Geschichten. Sie werden immer und überall erzählt – vor allem, wenn Sie gut sind.
