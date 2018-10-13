@@ -1,0 +1,11 @@
+<div class="banner banner_size_{{banner.size}}" style="background-image: url('{{ banner.image | relative_url }}')">
+    <div class="banner_inner" data-replace="{{banner.replace}}" data-with="{{banner.with | jsonify}}">
+        {% if banner.h1 %}
+        <h1>{{banner.h1}}</h1>
+        {% else if banner.h2 %}
+        <h2>{{banner.h2}}</h2>
+        {% else if banner.h3 %}
+        <h3>{{banner.h3}}</h3>
+        {% endif %}
+    </div>
+</div>

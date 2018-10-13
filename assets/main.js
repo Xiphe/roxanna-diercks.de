@@ -1,0 +1,4 @@
+---
+---
+
+document.querySelectorAll('.banner').forEach(() => {})
