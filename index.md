@@ -3,7 +3,7 @@ layout: page
 banners:
   - size: full
     # h1: Let's create your story
-    h2: Let's create your story
+    h2: Let's create your story!!!
     replace: create
     with:
       - reinvent
