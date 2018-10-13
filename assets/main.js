@@ -1,4 +1,6 @@
 ---
 ---
 
-document.querySelectorAll('.banner').forEach(() => {})
+document.querySelectorAll('.banner').forEach(() => {
+    
+})
