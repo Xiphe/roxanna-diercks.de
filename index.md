@@ -4,45 +4,45 @@ title: Home
 order: 1
 permalink: /
 hideContent: true
-cta: Und habe Lust mein Können für ihre Ziele ein zu setzen!
+cta: Und habe Lust mein Können für ihre Ziele einzusetzen!
 banners:
   - size: full
     level: 1
-    content: Lassen sie uns ihre Geschichte<br />$...
+    content: Lassen sie uns Ihre Geschichte<br />$...
     list:
       - kreieren
       - fortschreiben
-      - erzälen
+      - erzählen
       - definieren
       - teilen
     image: assets/roxanna_hartig.jpg
-  - size: full
+  - size: half
     level: 2
     content: Zum Beispiel auf $
     list:
-      - Socialen Medien
+      - Social Media
       - Events
       - Festivals
       - Messen
       - Incentives
       - Road-Shows
-      - ihrem Blog
+      - Ihrem Blog
       - Newslettern
       - Webinaren
-      - ihrer Webseite
+      - Ihrer Webseite
     choose: true
-    image: assets/roxanna_hartig_ocean.png
+    image: assets/sky_is_the_limit.jpg
   - size: full
     level: 3
     content: Ich bin talentiert in $
     rotate: true
     list:
-      - Texten
+      - Texterstellung
       - Organisation
       - Vermarktung
       - Konzeption
       - Strategie
       - Umsetzung
-      - ...
-    image: assets/sky_is_the_limit.jpg
+      - Brand Building
+    image: assets/roxanna_hartig_ocean.png
 ---

@@ -13,7 +13,7 @@ Hanfstieg 40
 
 ## Datensparsamkeit
 
-Auf dieser Webseite werden keine Cookies verwendet. Von meiner Seite aus werden keine personenbezogenen Daten erhoben, gespeichert oder verarbeitet. Ich nutze jedoch Drittanbieter auf deren Praktiken ich nur bedingt einfluss nehmen kann.
+Auf dieser Webseite werden keine Cookies verwendet. Von meiner Seite aus werden keine personenbezogenen Daten erhoben, gespeichert oder verarbeitet. Ich nutze jedoch Drittanbieter auf deren Praktiken ich nur bedingt Einfluss nehmen kann.
 
 ## Verweis auf Dritte
 
