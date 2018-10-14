@@ -29,9 +29,13 @@ body {
     opacity: 0.5;
   }
   h1,
-  h2,
-  h3 {
+  h2 {
     font-size: 3em;
+    padding: 0 2em;
+  }
+  h3 {
+    font-size: 2.3em;
+    padding: 0 2em;
   }
 }
 .banner_inner {
@@ -57,7 +61,26 @@ body {
     animation-duration: 1s;
     animation-iteration-count: infinite;
   }
-} // .button { // display: inline-block; // border: 3px solid $gruen; // border-radius: 5px; // padding: 0.5em 1em; // color: $gruen; // &:hover, // &:active, // &:focus { // background-color: $black; // color: black; // } // }
+}
+.banner_choose {
+  display: inline-block;
+  select {
+    font-size: 0.5em;
+    position: relative;
+    top: -0.2em;
+  }
+}
+.banner_rotate_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner_rotate {
+  display: inline-block;
+  list-style: none;
+  text-align: left;
+  margin: 0 0 0 0.5ch;
+}
 @keyframes blink {
   0% {
     opacity: 1;
@@ -97,4 +120,32 @@ body {
       box-shadow: 0 0 0 3px inset $fontcolor;
     }
   }
+}
+.quote {
+  padding: 0 3em;
+  opacity: 0.8;
+  font-style: italic;
+  position: relative;
+  &::before {
+    content: "„";
+    font-size: 5em;
+    line-height: 0;
+    font-family: serif;
+    position: absolute;
+    top: 0;
+    left: -0.05em;
+  }
+  &::after {
+    content: "”";
+    font-size: 5em;
+    line-height: 0;
+    font-family: serif;
+    position: absolute;
+    bottom: 0;
+    right: 0.05em;
+  }
+}
+.footer-nav {
+  float: right;
+  font-size: 0.8em;
 }

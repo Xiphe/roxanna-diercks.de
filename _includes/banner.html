@@ -1,15 +1,31 @@
 <div class="banner banner_size_{{banner.size}}" style="background-image: url('{{ banner.image | relative_url }}')">
     <div class="banner_inner" data-replace="{{banner.list | jsonify | uri_escape}}">
 
-        {% capture first%}
-        <span class="banner_replacing">{{banner.list[0]}}</span><span class="banner_blinker"></span>
-        {% endcapture %}
-        {% if banner.level == 1 %}<h1>{% else if banner.level == 2 %}<h2>{% else if banner.level == 3 %}<h3>{%
-                    endif %}
+        {% capture first%}{% if banner.rotate %}</span>
+        <ul class="banner_rotate">
+            {% for item in banner.list %}
+            <li>{{item}}</li>
+            {% endfor %}
+        </ul><span>{% elsif banner.choose %}<div class="banner_choose">
+                <select>
+                    {% for item in banner.list %}
+                    <option value="{{item}}">{{item}}</option>
+                    {% endfor %}
+                </select>
+            </div>{% else %}<span class="banner_replacing">{{banner.list[0]}}</span><span class="banner_blinker"></span>{%
+            endif
+            %}{% endcapture %}
 
-                    {{banner.content | replace: '$',first}}
-                    {% if banner.level == 3 %}</h3>{% else if banner.level == 2 %}</h2>{% else if banner.level == 1
-            %}</h1>{%
-        endif %}
+            {% capture class%}{% if banner.rotate %}banner_rotate_wrap{% endif %}{% endcapture %}
+
+            {% if banner.level == 1 %}<h1 class="{{class}}">{% elsif banner.level == 2 %}<h2 class="{{class}}">{%
+                    elsif
+                    banner.level == 3 %}<h3 class="{{class}}">{%
+                        endif %}<span>{{banner.content | replace: '$',first}}</span>{% if banner.level == 3 %}</h3>{%
+                    else
+                    if
+                    banner.level == 2 %}</h2>{% elsif banner.level == 1
+                %}</h1>{%
+            endif %}
     </div>
 </div>

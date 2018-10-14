@@ -23,9 +23,13 @@ replaceText = (node, text, done) ->
 document.querySelectorAll('.banner').forEach (node) ->
     banner = node.querySelector '.banner_inner'
     i = 1
+    replaced = node.querySelector '.banner_replacing'
+
+    unless replaced
+        return
+
     replace = JSON.parse(decodeURI(banner.dataset.replace))
 
-    replaced = node.querySelector '.banner_replacing'
     blinker = node.querySelector '.banner_blinker'
 
     step = ->
@@ -34,10 +38,10 @@ document.querySelectorAll('.banner').forEach (node) ->
             replaceText replaced, replace[i], ->
                 blinker.classList.remove('active')
                 i = if replace[i + 1] then i + 1 else 0
-                setTimeout step, 2000       
+                setTimeout step, 7500       
         setTimeout step2, 500
 
-    setTimeout step, 1500       
+    setTimeout step, 2500       
 
     # headline.inner
     
