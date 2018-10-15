@@ -1,6 +1,6 @@
 ---
 title: Skills
-order: 3
+order: 2
 permalink: /skills/
 layout: page
 ---
