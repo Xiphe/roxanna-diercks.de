@@ -1,6 +1,7 @@
 ---
 layout: page
 permalink: /datenschutz/
+hideNav: true
 ---
 
 # Datenschutzerklärung

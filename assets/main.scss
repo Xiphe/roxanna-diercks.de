@@ -149,3 +149,27 @@ body {
   float: right;
   font-size: 0.8em;
 }
+.site-nav {
+  z-index: 1;
+}
+@media screen and (max-width: 600px) {
+  .banner_size_full {
+    padding-top: 15vh;
+    height: 45vh;
+  }
+  .banner_size_half {
+    padding-top: 10vh;
+    height: 20vh;
+  }
+  .banner {
+    h1,
+    h2 {
+      font-size: 2em;
+      padding: 0 1em;
+    }
+    h3 {
+      font-size: 1.3em;
+      padding: 0 1em;
+    }
+  }
+}

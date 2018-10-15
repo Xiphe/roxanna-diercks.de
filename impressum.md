@@ -1,6 +1,7 @@
 ---
 layout: page
 permalink: /impressum/
+hideNav: true
 ---
 
 # Impressum
