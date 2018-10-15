@@ -36,8 +36,7 @@ order: 2
 08/2014 – 08/2015  
 **Werkstudentin im Bereich Verlagswesen, Print und Medien**
 
-- Erstellung von Konzepten, Marktanalysen, Marketing-
-  strategien, Aufbereitung von Medien-Nutzungsdaten
+- Erstellung von Konzepten, Marktanalysen, Marketingstrategien, Aufbereitung von Medien-Nutzungsdaten
 - Websitepflege und Administration (Buchhaltung etc.)
 
 ### Second Attempt e.V., Görlitz
