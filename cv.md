@@ -14,7 +14,7 @@ order: 2
 
 [Auszug]
 
-- Planung, Organisation und Umsetzung von nationalen
+- Eigenständige Planung, Organisation und Umsetzung von nationalen
   und internationalen Veranstaltungen (78 im Jahr), darunter SAPinsiders Financials
   (2016/2017, Las Vegas), SAPPPHIRE NOW + ASUG Annual
   Conference (2017, Orlando)
