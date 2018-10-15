@@ -65,7 +65,7 @@ order: 2
 - Marketingkonzeption für die Stadt Heiligenhafen
 - Neukonzeption der Wirtschaftsförderung und des Stadtmarketings in Heilbronn, 2025 Ludwigslust,
   etc.
-- PR und Contenterstellung für das Wirtschaftsmagazin cima.direkt (Online und Print)
+- Texterstellung für das Wirtschaftsmagazin cima.direkt (Online und Print)
 
 ### infoBoard Europe GmbH, Hamburg
 
