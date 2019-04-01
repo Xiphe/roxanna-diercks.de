@@ -9,10 +9,10 @@ hideNav: true
 ### Angaben gemäß § 5 TMG:
 
 Roxanna Hartig  
-Hanfstieg 40  
-22549 Hamburg
+Rotdornallee 16  
+22175 Hamburg
 
 ### Kontakt
 
-Telefon: +49 (0) 162 753 12 15  
-E-Mail: roxanna.hartig@web.de
+Telefon: +49 (0) 160 788 1786 
+E-Mail: moin@roxanna-hartig.de
