@@ -9,8 +9,8 @@ hideNav: true
 ### Verantwortliche
 
 Roxanna Hartig  
-Hanfstieg 40  
-22549 Hamburg
+Rotdornallee 16  
+22175 Hamburg
 
 ## Datensparsamkeit
 
