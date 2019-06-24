@@ -2,7 +2,7 @@
 layout: page
 title: CV
 permalink: /cv/
-order: 3
+order: 4
 ---
 
 ## Berufserfahrung
