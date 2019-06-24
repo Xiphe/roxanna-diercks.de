@@ -7,6 +7,10 @@ order: 4
 
 ## Berufserfahrung
 
+02/2018 - Heute
+**Freelancer Marketing und Event Management
+
+
 ### Hanse Orga GmbH, Hamburg
 
 11/2015 – 01/2018  
