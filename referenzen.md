@@ -1,6 +1,6 @@
 ---
 title: Referenzen
-order: 4
+order: 3
 permalink: /referenzen/
 layout: page
 ---
