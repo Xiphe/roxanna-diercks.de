@@ -15,7 +15,7 @@ banners:
       - erzählen
       - definieren
       - teilen
-    image: assets/roxanna_hartig.jpg
+    image: assets/roxanna_diercks.jpg
   - size: half
     level: 2
     content: Zum Beispiel auf $
@@ -44,5 +44,5 @@ banners:
       - Strategie
       - Umsetzung
       - Brand Building
-    image: assets/roxanna_hartig_ocean.png
+    image: assets/roxanna_diercks_ocean.png
 ---

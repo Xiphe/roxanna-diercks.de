@@ -8,7 +8,7 @@ hideNav: true
 
 ### Verantwortliche
 
-Roxanna Hartig  
+Roxanna Diercks  
 Rotdornallee 16  
 22175 Hamburg
 
