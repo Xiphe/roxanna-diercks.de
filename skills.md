@@ -10,7 +10,7 @@ Ich verfüge über jede Menge kreativer Ideen, Neugierde für neue Trends und Te
 
 ## Expertise in den Bereichen
 -  Event Management 
--  Digital Marketing und Social Media
+-  Digitales Marketing und Social Media
 -  Projektmanagement
 -  Marketing
 
