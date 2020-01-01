@@ -1,6 +1,8 @@
 ---
 ---
 
+RESTART = Symbol('RESTART')
+
 replaceText = (node, text, done) ->
     if node.innerText == text
         done()
@@ -27,12 +29,11 @@ replaceText = (node, text, done) ->
     
 
 createReplacer = (replaced, replace, blinker) ->
-    i = 1
-
-    replace = replace.sort () => 0.5 - Math.random()
-
     unless replaced
         return () -> Promise.resolve()
+
+    i = 1
+    replace = replace.sort () => 0.5 - Math.random()
 
     () -> new Promise((resolve) -> 
         if i == 0
@@ -43,18 +44,6 @@ createReplacer = (replaced, replace, blinker) ->
             i = if replace[i + 1] then i + 1 else 0
             resolve()
     )
-
-    # step = ->
-    #     blinker.classList.add('active')
-    #     step2 = ->
-    #         replaceText replaced, replace[i], ->
-    #             blinker.classList.remove('active')
-    #             i = if replace[i + 1] then i + 1 else 0
-    #             setTimeout step, 7500       
-    #     setTimeout step2, 500
-
-    # setTimeout step, initialTimeout      
-RESTART = Symbol('RESTART')
 
 queue = (steps...) ->
     () ->
@@ -87,7 +76,7 @@ document.querySelectorAll('.banner').forEach (node) ->
     setTimeout(
         queue(
             replacer,
-            timeout(200),
+            timeout(500),
             replacer2,
             timeout(5000),
             RESTART
