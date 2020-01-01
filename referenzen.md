@@ -4,7 +4,7 @@ order: 3
 permalink: /referenzen/
 layout: page
 ---
-Seit 2018 betreue ich diverse Kunden aus verschiedenen Branchen. Einen Auszug finden Sie hier:
+Als Freelancer betreue ich diverse Kunden aus verschiedensten Branchen, von Einzelpersonen bis hin zu großen Unternehmen. Einen Auszug finden Sie hier:
 
 ## Hamburg Innovation Summit 2019
 # Zielsetzung: Beratung, Konzeption und Umsetzung von Marketingmaßnahmen, Öffentlichkeitsarbeit und Netzwerkpflege wie Eventunterstützung.
