@@ -11,7 +11,7 @@ Seit 2018 betreue ich diverse Kunden aus verschiedenen Branchen. Einen Auszug fi
 -  Social Media Management - Erstellung eines Redaktionsplanes, laufende Pflege, Community Management.
 -  Marketing - Erstellung eines Marketing-Kits,Erstellung von div. Marketingmaterialien (Flyer, Poster, SIA, Anzeigen, etc.), Steuerung der Marketingmaßnahmen und -kampagnen, Ausarbeitung eines Gestaltungskonzept im vorhandenen Corporate Design, Websitepflege.
 -  Event-/Projektmanagement - Koordination des Live-Streamings, Steuerung externer Dienstleister, Briefing von Fotografen, Film-Crew, etc.
--  Öffentlichkeitsarbeit - Erstellung von Pressemitteilungen, Organisation Presserundgang, Medienkooperationen, Erstellung eines Presse-Kits, Netwerkpflege.
+-  Öffentlichkeitsarbeit - Erstellung von Pressemitteilungen, Organisation Presserundgang, Abwickling Medienkooperationen, Erstellung eines Presse-Kits, Netzwerkpflege.
 
 Projekt: https://hamburg-innovation-summit.de
 
