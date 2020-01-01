@@ -1,5 +1,5 @@
 <div class="banner banner_size_{{banner.size}}" style="background-image: url('{{ banner.image | relative_url }}')">
-    <div class="banner_inner" data-replace="{{banner.list | jsonify | uri_escape}}">
+    <div class="banner_inner" data-replace="{{banner.list | jsonify | uri_escape}}" {% if banner.list2 %}data-replace2="{{banner.list2 | jsonify | uri_escape}}"{% endif %}>
 
         {% capture first%}{% if banner.rotate %}</span>
         <ul class="banner_rotate">
@@ -16,12 +16,18 @@
             endif
             %}{% endcapture %}
 
+            {% if banner.list2 %}
+            {% capture first2 %}
+            <span class="banner_replacing2">{{banner.list2[0]}}</span><span class="banner_blinker2"></span>
+            {% endcapture %}
+            {% endif %}
+
             {% capture class%}{% if banner.rotate %}banner_rotate_wrap{% endif %}{% endcapture %}
 
             {% if banner.level == 1 %}<h1 class="{{class}}">{% elsif banner.level == 2 %}<h2 class="{{class}}">{%
                     elsif
                     banner.level == 3 %}<h3 class="{{class}}">{%
-                        endif %}<span>{{banner.content | replace: '$',first}}</span>{% if banner.level == 3 %}</h3>{%
+                        endif %}<span >{{banner.content | replace: '$1',first | replace: '$2',first2}}</span>{% if banner.level == 3 %}</h3>{%
                     else
                     if
                     banner.level == 2 %}</h2>{% elsif banner.level == 1

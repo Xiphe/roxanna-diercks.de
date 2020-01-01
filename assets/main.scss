@@ -8,6 +8,14 @@ $fontcolor: #333333;
 body {
   color: $fontcolor;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
 .banner {
   text-align: center;
   position: relative;
@@ -43,13 +51,14 @@ body {
 }
 .banner_size_full {
   padding-top: 20vh;
-  height: 70vh;
+  height: 55vh;
 }
 .banner_size_half {
   padding-top: 15vh;
   height: 30vh;
 }
-.banner_blinker {
+.banner_blinker,
+.banner_blinker2 {
   width: 3px;
   display: inline-block;
   height: 1em;
@@ -61,6 +70,10 @@ body {
     animation-duration: 1s;
     animation-iteration-count: infinite;
   }
+}
+.inverted {
+  background-color: $backgroundGrey;
+  color: white;
 }
 .banner_choose {
   display: inline-block;
@@ -152,6 +165,23 @@ body {
 .site-nav {
   z-index: 1;
 }
+.col {
+  width: 45%;
+  float: left;
+  margin-bottom: 1rem;
+  &:nth-child(2n + 1) {
+    margin-right: 10%;
+  }
+  path {
+    fill: currentColor;
+  }
+  svg {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 1em;
+  }
+}
 @media screen and (max-width: 600px) {
   .banner_size_full {
     padding-top: 15vh;
@@ -171,5 +201,9 @@ body {
       font-size: 1.3em;
       padding: 0 1em;
     }
+  }
+  .col {
+    width: 100%;
+    float: none;
   }
 }

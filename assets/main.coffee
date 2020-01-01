@@ -7,7 +7,13 @@ replaceText = (node, text, done) ->
 
     else if node.innerText.length == 0 || new RegExp("^#{node.innerText}").test(text)
         step = ->
-            node.innerText = text.substring(0, node.innerText.length + 1)
+            t = text.substring(0, node.innerText.length + 1)
+
+            while t.match(/\s$/)
+                t = text.substring(0, t.length + 1)
+            
+            node.innerText = t
+
             replaceText node, text, done
 
         setTimeout step, 120
@@ -20,28 +26,74 @@ replaceText = (node, text, done) ->
         setTimeout step, 70
     
 
+createReplacer = (replaced, replace, blinker) ->
+    i = 1
+
+    replace = replace.sort () => 0.5 - Math.random()
+
+    unless replaced
+        return () -> Promise.resolve()
+
+    () -> new Promise((resolve) -> 
+        if i == 0
+            replace = replace.sort () => 0.5 - Math.random()
+        blinker.classList.add('active')
+        replaceText replaced, replace[i], ->
+            blinker.classList.remove('active')
+            i = if replace[i + 1] then i + 1 else 0
+            resolve()
+    )
+
+    # step = ->
+    #     blinker.classList.add('active')
+    #     step2 = ->
+    #         replaceText replaced, replace[i], ->
+    #             blinker.classList.remove('active')
+    #             i = if replace[i + 1] then i + 1 else 0
+    #             setTimeout step, 7500       
+    #     setTimeout step2, 500
+
+    # setTimeout step, initialTimeout      
+RESTART = Symbol('RESTART')
+
+queue = (steps...) ->
+    () ->
+        step = (i) ->
+            if steps[i] == RESTART
+                step 0
+            else if steps[i]
+                steps[i]().then (result) ->
+                    step if result == RESTART then 0 else i + 1
+        step 0
+
+timeout = (ms) -> () -> new Promise((resolve) -> setTimeout(resolve, ms))
+
 document.querySelectorAll('.banner').forEach (node) ->
     banner = node.querySelector '.banner_inner'
     i = 1
-    replaced = node.querySelector '.banner_replacing'
 
-    unless replaced
-        return
+    replacer = createReplacer(
+        node.querySelector('.banner_replacing'),
+        JSON.parse(decodeURI(banner.dataset.replace)),
+        node.querySelector('.banner_blinker')
+    )
 
-    replace = JSON.parse(decodeURI(banner.dataset.replace))
+    replacer2 = createReplacer(
+        node.querySelector('.banner_replacing2'),
+        JSON.parse(decodeURI(banner.dataset.replace2)),
+        node.querySelector('.banner_blinker2')
+    )
 
-    blinker = node.querySelector '.banner_blinker'
-
-    step = ->
-        blinker.classList.add('active')
-        step2 = ->
-            replaceText replaced, replace[i], ->
-                blinker.classList.remove('active')
-                i = if replace[i + 1] then i + 1 else 0
-                setTimeout step, 7500       
-        setTimeout step2, 500
-
-    setTimeout step, 2500       
+    setTimeout(
+        queue(
+            replacer,
+            timeout(200),
+            replacer2,
+            timeout(5000),
+            RESTART
+        ),
+        1500
+    )
 
     # headline.inner
     
