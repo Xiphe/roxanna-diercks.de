@@ -68,39 +68,11 @@ export default (
           </a>
         </li>
       </ul>
-      <h3 style={{ textAlign: 'left' }}>Newsletter und Interessentenlisten (Brevo)</h3>
+      <h3 style={{ textAlign: 'left' }}>Newsletter und Benachrichtigungen (Brevo)</h3>
       <p>
-        Für unsere Newsletter und die Interessentenliste zur Online-Trauergruppe für Menschen nach
-        dem Verlust eines Tieres nutzen wir <strong>Brevo</strong>. Anbieter ist die Brevo GmbH,
-        Köpenicker Straße 126, 10179 Berlin. Bei einer Anmeldung übermitteln wir deine
-        E-Mail-Adresse, deinen freiwillig angegebenen Namen, die gewählte Sprache und die Zuordnung
-        zum angefragten Newsletter oder Angebot an Brevo. Brevo verarbeitet diese Daten in unserem
-        Auftrag zur Verwaltung der Anmeldungen und zum Versand der angeforderten Nachrichten.
+        Für den Versand unserer Newsletter und Benachrichtigungen nutzen wir Brevo. Informationen
+        zur Verarbeitung deiner Daten findest du direkt bei Brevo:
       </p>
-      <p>
-        Die Anmeldung erfolgt im Double-Opt-in-Verfahren: Du erhältst zunächst eine E-Mail mit einem
-        Bestätigungslink. Erst wenn du diesen anklickst, wird deine Anmeldung bestätigt. Die
-        Verarbeitung für den Newsletterversand erfolgt auf Grundlage deiner Einwilligung nach Art. 6
-        Abs. 1 lit. a DSGVO. Zum Nachweis der Anmeldung und zur Zustellung verarbeitet Brevo
-        außerdem technische Anmelde- und Versandinformationen, etwa Anmelde- und
-        Bestätigungszeitpunkte sowie den Zustellstatus.
-      </p>
-      <p>
-        Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, etwa über den
-        Abmeldelink im Newsletter oder durch eine Nachricht an{' '}
-        <a href="mailto:datenschutz@xiphe.net">datenschutz@xiphe.net</a>. Die Rechtmäßigkeit der
-        Verarbeitung bis zum Widerruf bleibt davon unberührt. Wir nutzen deine Daten für diese
-        Nachrichten, solange du dafür angemeldet bist. Nach einer Abmeldung wird der betreffende
-        Versand eingestellt. Daten, die zur Dokumentation deiner Einwilligung oder zur Beachtung
-        deiner Abmeldung erforderlich sind, können dafür weiterhin aufbewahrt werden.
-      </p>
-      <p>
-        Brevo bietet außerdem eine Öffnungs- und Klickmessung an. Bei eingeschalteter Messung können
-        Zählpixel und personalisierte Links erfassen, ob und wann eine Nachricht geöffnet oder ein
-        Link angeklickt wurde. Dabei können unter anderem IP-Adresse, Zeitpunkt und Informationen
-        zum verwendeten E-Mail-Programm verarbeitet werden.
-      </p>
-      <p>Weitere Informationen zu Brevo und zur Auftragsverarbeitung:</p>
       <ul>
         <li>
           <a
