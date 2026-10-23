@@ -179,6 +179,9 @@
     object-fit: cover;
     object-position: center;
   }
+  .content-image[data-tint='white'] {
+    filter: brightness(0) invert(1);
+  }
   .decorative-star {
     position: absolute;
     top: 1rem;

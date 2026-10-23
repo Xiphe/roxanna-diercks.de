@@ -366,6 +366,7 @@ export function Image(handle: Handle<ImageProps>) {
     const img = (
       <img
         class="content-image"
+        data-tint={p.tint}
         data-rounded={p.rounded ?? 'none'}
         src={image.src}
         srcSet={image.srcSet}

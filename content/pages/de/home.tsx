@@ -178,6 +178,8 @@ export default (
       >
         <Image
           image={'Kompass'}
+          tint="white"
+          paddingInline="0"
           rounded={'none'}
           align={'center'}
           maxWidth={''}

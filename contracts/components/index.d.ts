@@ -48,6 +48,8 @@ export interface ImageProps extends SectionProps {
   align?: 'left' | 'center' | 'right'
   maxWidth?: string
   maxHeight?: string
+  tint?: 'white'
+  paddingInline?: string
   top?: boolean
   bottom?: boolean
   fill?: boolean
