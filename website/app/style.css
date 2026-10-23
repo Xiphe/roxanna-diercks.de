@@ -272,6 +272,7 @@
     right: 0;
   }
   .prose {
+    overflow-wrap: anywhere;
     max-width: 65ch;
     margin-inline: auto;
     font-size: 1rem;
