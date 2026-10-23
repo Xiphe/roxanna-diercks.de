@@ -13,8 +13,10 @@ test('public HTML renders without JavaScript and unknown URLs return 404', async
 })
 test('signup island shows pending, success and recoverable failures', async ({ page }) => {
   let fail = true
+  let releaseResponse!: () => void
+  const responseGate = new Promise<void>((resolve) => (releaseResponse = resolve))
   await page.route('**/_newsletter/subscribe', async (route) => {
-    await new Promise((resolve) => setTimeout(resolve, 100))
+    await responseGate
     await route.fulfill({
       status: fail ? 503 : 200,
       contentType: 'application/json',
@@ -22,10 +24,16 @@ test('signup island shows pending, success and recoverable failures', async ({ p
     })
   })
   await page.goto('/fixture')
+  // The entry module awaits app.ready(); native form submission is covered separately.
+  await page.evaluate(async () => {
+    const entry = document.querySelector<HTMLScriptElement>('script[type="module"][src]')!
+    await import(entry.src)
+  })
   await page.getByRole('textbox', { name: 'Email' }).fill('reader@example.org')
   await page.getByRole('textbox', { name: 'Name', exact: true }).fill('Ada')
   await page.getByRole('button', { name: 'Subscribe', exact: true }).click()
   await expect(page.getByRole('button', { name: 'Sending…' })).toBeDisabled()
+  releaseResponse()
   await expect(page.getByRole('alert')).toContainText('Please try again later')
   fail = false
   await page.getByRole('button', { name: 'Subscribe', exact: true }).click()
