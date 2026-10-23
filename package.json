@@ -29,6 +29,11 @@
     "http-message-sig": "0.3.0",
     "remix": "3.0.0"
   },
+  "overrides": {
+    "@remix-run/test": {
+      "esbuild": "$esbuild"
+    }
+  },
   "devDependencies": {
     "@cmx-tools/bundle": "0.1.2",
     "@cmx-tools/cli": "0.2.0",
