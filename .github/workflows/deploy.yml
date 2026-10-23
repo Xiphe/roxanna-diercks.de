@@ -1,0 +1,88 @@
+name: Deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: production-main
+  cancel-in-progress: false
+jobs:
+  changes:
+    runs-on: ubuntu-24.04
+    outputs:
+      website: ${{ steps.paths.outputs.website == 'true' || steps.paths.outputs.shared == 'true' || github.event_name == 'workflow_dispatch' }}
+      content: ${{ steps.paths.outputs.content == 'true' || steps.paths.outputs.shared == 'true' || github.event_name == 'workflow_dispatch' }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          sparse-checkout: .github
+      - uses: dorny/paths-filter@ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d # v4
+        id: paths
+        with:
+          base: ${{ github.event.before != '0000000000000000000000000000000000000000' && github.event.before || '7eb09e728dd8ba4317fd81d6df19ecf68fefd543' }}
+          ref: ${{ github.sha }}
+          filters: |
+            website:
+              - 'website/**'
+            content:
+              - 'content/**'
+              - '.gitattributes'
+            shared:
+              - 'contracts/**'
+              - 'package*.json'
+              - 'tsconfig.json'
+              - 'dev.ts'
+              - '.prettier*'
+              - '.github/workflows/**'
+  website:
+    name: Deploy website
+    needs: changes
+    if: needs.changes.outputs.website == 'true'
+    environment: production
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            .github
+            website
+            contracts
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build:app
+      - run: npx playwright install --with-deps --only-shell chromium
+      - run: npm run check:website
+      - name: Check Brevo access without sending mail
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+        run: node website/build/check-brevo.ts
+      - name: Deploy website
+        env:
+          CMX_PUBLISH_PUBLIC_KEYS: ${{ vars.CMX_PUBLISH_PUBLIC_KEYS }}
+        run: npm run deploy -- --var "CMX_PUBLISH_PUBLIC_KEYS:$CMX_PUBLISH_PUBLIC_KEYS"
+      - name: Install Brevo runtime secret
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+        run: node -e 'process.stdout.write(JSON.stringify({BREVO_API_KEY:process.env.BREVO_API_KEY}))' | npx wrangler secret bulk --config website/wrangler.jsonc
+      - name: Check deployed Worker
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: node --input-type=module -e 'const r=await fetch(new URL("/health",process.env.SITE_URL)); if(!r.ok || !(await r.json()).ok)process.exit(1)'
+  content:
+    name: Publish content
+    needs: [changes, website]
+    if: ${{ !cancelled() && needs.changes.result == 'success' && needs.changes.outputs.content == 'true' && (needs.website.result == 'success' || needs.website.result == 'skipped') }}
+    uses: ./.github/workflows/content.yml
+    secrets: inherit

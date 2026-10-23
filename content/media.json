@@ -1,0 +1,134 @@
+{
+  "crop-hand-with-compass-nature.png": {
+    "type": "image/png",
+    "alt": {
+      "de": "Eine Hand, die einen Kompass in die Luft hält. Im Hintergrund Wald und ein Flusslauf."
+    },
+    "width": 2000,
+    "height": 3000,
+    "focalX": 50,
+    "focalY": 50
+  },
+  "star_orange.svg": { "type": "image/svg+xml", "alt": {}, "width": 215, "height": 215 },
+  "IMG_6397.JPG": {
+    "type": "image/jpeg",
+    "alt": { "en": "Frau mit Mütze und gelbem Regenmantel blickt auf das Meer." },
+    "width": 3213,
+    "height": 5129,
+    "credit": "© Julia Federkiel",
+    "creditLink": "https://www.instagram.com/julia_federkiel/",
+    "focalX": 50,
+    "focalY": 50
+  },
+  "20220629-DSC05058_22-06-30-12-26-14-Jochen-Kilian.jpg": {
+    "type": "image/jpeg",
+    "alt": { "de": "roxanna-diercks" },
+    "width": 1772,
+    "height": 3149,
+    "credit": "Jochen Kilian",
+    "focalX": 50,
+    "focalY": 50
+  },
+  "PHOTO-2026-07-18-12-00-18 6.jpg": {
+    "type": "image/jpeg",
+    "alt": { "en": "closeup of a german shepherd" },
+    "width": 2560,
+    "height": 1707,
+    "credit": "Dominik Hartig",
+    "focalX": 50,
+    "focalY": 50
+  },
+  "star_rust_clay.svg": { "type": "image/svg+xml", "alt": {}, "width": 215, "height": 215 },
+  "IMG_9975.heic": {
+    "type": "image/heic",
+    "alt": { "en": "Man with his german shepherd dog" },
+    "width": 3024,
+    "height": 4032
+  },
+  "waves-1.png": {
+    "type": "image/png",
+    "alt": { "en": "Waves on sand" },
+    "width": 3004,
+    "height": 1690,
+    "focalX": 50,
+    "focalY": 50
+  },
+  "star_light.svg": {
+    "type": "image/svg+xml",
+    "alt": { "en": "Decorative Star" },
+    "width": 215,
+    "height": 215
+  },
+  "waves.png": {
+    "type": "image/png",
+    "alt": { "en": "Waves on sand" },
+    "width": 3004,
+    "height": 1690,
+    "focalX": 50,
+    "focalY": 50
+  },
+  "Roxy-mit-Zitrone.jpeg": {
+    "type": "image/jpeg",
+    "alt": { "en": "Roxanna spaziert mit einer Zitrone in der Hand" },
+    "width": 3640,
+    "height": 4987,
+    "credit": "©  Chris Zielecki",
+    "creditLink": "https://www.zielecki.com/",
+    "focalX": 50,
+    "focalY": 50
+  },
+  "loekken_drone.png": {
+    "type": "image/png",
+    "alt": { "en": "Big teal Ocean waves on beach from birds-eye view." },
+    "width": 1665,
+    "height": 1800,
+    "credit": "© Lasse Diercks",
+    "creditLink": "https://lassediercks.de/",
+    "focalX": 50,
+    "focalY": 50
+  },
+  "for_those_who_carry_both_freedom_and_loss.png": {
+    "type": "image/png",
+    "alt": { "en": "For those who carry both freedom and loss." },
+    "width": 1200,
+    "height": 630,
+    "focalX": 50,
+    "focalY": 50
+  },
+  "star_dark_light.svg": {
+    "type": "image/svg+xml",
+    "alt": { "en": "A decorative star" },
+    "width": 215,
+    "height": 215
+  },
+  "Kompassicon.png": {
+    "type": "image/png",
+    "alt": { "en": "Kompass" },
+    "width": 1200,
+    "height": 1200,
+    "focalX": 50,
+    "focalY": 50
+  },
+  "Kompass": {
+    "type": "image/png",
+    "alt": { "en": "kompass" },
+    "width": 500,
+    "height": 500,
+    "focalX": 50,
+    "focalY": 50
+  },
+  "Marcel-und-Erwin.png": {
+    "type": "image/png",
+    "alt": { "en": "Man with his german shepherd dog" },
+    "width": 2662,
+    "height": 2579,
+    "focalX": 50,
+    "focalY": 50
+  },
+  "waves_full.mp4": {
+    "type": "video/mp4",
+    "alt": { "en": "Calm waves on a beach, slowly moving back and forward" },
+    "width": 1280,
+    "height": 720
+  }
+}

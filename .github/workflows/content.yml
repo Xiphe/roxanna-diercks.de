@@ -1,0 +1,41 @@
+name: Publish content
+on:
+  workflow_call:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    environment: production
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          lfs: true
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run content:build
+      - run: npm run build:app
+      - run: npx playwright install --with-deps --only-shell chromium
+      - run: npm run check
+      - name: Upload missing immutable media
+        env:
+          R2_ACCOUNT_ID: ${{ vars.R2_ACCOUNT_ID }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+        run: npm run media:upload
+      - name: Publish signed content independently
+        env:
+          CMX_PUBLISH_PRIVATE_KEY: ${{ secrets.CMX_PUBLISH_PRIVATE_KEY }}
+          CMX_PUBLISH_KEY_ID: ${{ vars.CMX_PUBLISH_KEY_ID }}
+          CMX_PUBLISH_URL: ${{ vars.SITE_URL }}/_cmx/publication
+        run: npm run --silent content:publish
+      - name: Verify routes and media
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: node content/publishing/smoke.ts
