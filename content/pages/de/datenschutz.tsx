@@ -25,9 +25,9 @@ export default (
       </p>
       <h3 style={{ textAlign: 'left' }}>Datensparsamkeit</h3>
       <p style={{ textAlign: 'left' }}>
-        Die <strong>Sicherheit und Vertraulichkeit</strong> von personenbezogenen Daten ist uns
+        Die <strong>Sicherheit und Vertraulichkeit</strong> von personenbezogenen Daten ist uns
         ausgesprochen wichtig! Deshalb speichern, verarbeiten und sammeln wir keine Daten von dir,
-        sofern dies nicht eindeutig in deinem Sinne ist 
+        sofern dies nicht eindeutig in deinem Sinne ist{' '}
         <em>(Wir brauchen z.B. deine Anschrift, um dir ein Paket schicken zu können).</em>
         <br />
         Darüber hinaus sind wir grundsätzlich sehr aufmerksam und vorsichtig, was den Umgang mit
@@ -35,7 +35,7 @@ export default (
       </p>
       <p style={{ textAlign: 'left' }}>
         Um unsere Unternehmung sinnvoll führen zu können, sind wir dennoch auf die Zusammenarbeit
-        mit <strong>anderen Dienstleistern und Plattformen</strong> angewiesen, deren Umgang mit
+        mit <strong>anderen Dienstleistern und Plattformen</strong> angewiesen, deren Umgang mit
         personenbezogenen Daten teilweise kritisch zu betrachten ist. Unser Ziel ist es hier den
         besten Kompromiss zwischen Transparenz, Nutzbarkeit, Effizienz und Pragmatismus zu finden.
       </p>
@@ -68,10 +68,63 @@ export default (
           </a>
         </li>
       </ul>
+      <h3 style={{ textAlign: 'left' }}>Newsletter und Interessentenlisten (Brevo)</h3>
+      <p>
+        Für unsere Newsletter und die Interessentenliste zur Online-Trauergruppe für Menschen nach
+        dem Verlust eines Tieres nutzen wir <strong>Brevo</strong>. Anbieter ist die Brevo GmbH,
+        Köpenicker Straße 126, 10179 Berlin. Bei einer Anmeldung übermitteln wir deine
+        E-Mail-Adresse, deinen freiwillig angegebenen Namen, die gewählte Sprache und die Zuordnung
+        zum angefragten Newsletter oder Angebot an Brevo. Brevo verarbeitet diese Daten in unserem
+        Auftrag zur Verwaltung der Anmeldungen und zum Versand der angeforderten Nachrichten.
+      </p>
+      <p>
+        Die Anmeldung erfolgt im Double-Opt-in-Verfahren: Du erhältst zunächst eine E-Mail mit einem
+        Bestätigungslink. Erst wenn du diesen anklickst, wird deine Anmeldung bestätigt. Die
+        Verarbeitung für den Newsletterversand erfolgt auf Grundlage deiner Einwilligung nach Art. 6
+        Abs. 1 lit. a DSGVO. Zum Nachweis der Anmeldung und zur Zustellung verarbeitet Brevo
+        außerdem technische Anmelde- und Versandinformationen, etwa Anmelde- und
+        Bestätigungszeitpunkte sowie den Zustellstatus.
+      </p>
+      <p>
+        Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, etwa über den
+        Abmeldelink im Newsletter oder durch eine Nachricht an{' '}
+        <a href="mailto:datenschutz@xiphe.net">datenschutz@xiphe.net</a>. Die Rechtmäßigkeit der
+        Verarbeitung bis zum Widerruf bleibt davon unberührt. Wir nutzen deine Daten für diese
+        Nachrichten, solange du dafür angemeldet bist. Nach einer Abmeldung wird der betreffende
+        Versand eingestellt. Daten, die zur Dokumentation deiner Einwilligung oder zur Beachtung
+        deiner Abmeldung erforderlich sind, können dafür weiterhin aufbewahrt werden.
+      </p>
+      <p>
+        Brevo bietet außerdem eine Öffnungs- und Klickmessung an. Bei eingeschalteter Messung können
+        Zählpixel und personalisierte Links erfassen, ob und wann eine Nachricht geöffnet oder ein
+        Link angeklickt wurde. Dabei können unter anderem IP-Adresse, Zeitpunkt und Informationen
+        zum verwendeten E-Mail-Programm verarbeitet werden.
+      </p>
+      <p>Weitere Informationen zu Brevo und zur Auftragsverarbeitung:</p>
+      <ul>
+        <li>
+          <a
+            href="https://www.brevo.com/de/legal/privacypolicy/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Brevo Datenschutzerklärung
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.brevo.com/de/legal/termsofuse/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Brevo Nutzungsbedingungen mit Auftragsverarbeitungsvertrag
+          </a>
+        </li>
+      </ul>
       <h3 style={{ textAlign: 'left' }}>Social Media</h3>
       <p style={{ textAlign: 'left' }}>
-        Wir sind auf Facebook, Instagram<em> (Meta Platforms Ireland Limited)</em> und Pinterest 
-        <em>(Pinterest Europe Limited)</em> präsent und schalten dort auch gezielte Werbung. 
+        Wir sind auf Facebook, Instagram <em>(Meta Platforms Ireland Limited)</em> und Pinterest{' '}
+        <em>(Pinterest Europe Limited)</em> präsent und schalten dort auch gezielte Werbung.{' '}
         <strong>Wenn du diese Plattformen nutzt</strong>, erfassen und verarbeiten diese
         personenbezogene Daten (z.B. zu deinen Interessen oder deinem Nutzungsverhalten), um Inhalte
         oder Werbung anzuzeigen.
@@ -107,18 +160,18 @@ export default (
         </li>
       </ul>
       <p style={{ textAlign: 'left' }}>
-        Wir erhalten von den Plattformen <strong>anonymisierte Statistiken</strong> 
+        Wir erhalten von den Plattformen <strong>anonymisierte Statistiken</strong>{' '}
         <em>(z.B. Seitenaufrufe)</em>, können steuern für welche Zielgruppen unsere Werbung
-        angezeigt wird und sehen, wenn du öffentlich mit uns interagierst oder uns eine 
-        <strong>Direktnachricht</strong> schickst. Wir 
-        <strong>speichern und verarbeiten diese Daten unsererseits nicht</strong> weiter.
+        angezeigt wird und sehen, wenn du öffentlich mit uns interagierst oder uns eine{' '}
+        <strong>Direktnachricht</strong> schickst. Wir{' '}
+        <strong>speichern und verarbeiten diese Daten unsererseits nicht</strong> weiter.
       </p>
       <h3 style={{ textAlign: 'left' }}>Kontakt und Support</h3>
       <p style={{ textAlign: 'left' }}>
-        Wenn du uns per E-Mail oder über eine Direktnachricht <em>(z.B. auf Social Media)</em>
-         kontaktierst, verarbeiten wir die von dir bereitgestellten Daten 
-        <em>(z.B. deinen Namen, deine E-Mail-Adresse, deinen Nachrichteninhalt)</em> auf Grundlage
-        von 
+        Wenn du uns per E-Mail oder über eine Direktnachricht <em>(z.B. auf Social Media)</em>{' '}
+        kontaktierst, verarbeiten wir die von dir bereitgestellten Daten{' '}
+        <em>(z.B. deinen Namen, deine E-Mail-Adresse, deinen Nachrichteninhalt)</em> auf Grundlage
+        von{' '}
         <a
           href={'https://dsgvo-gesetz.de/art-6-dsgvo/'}
           target={'_blank'}
@@ -128,32 +181,32 @@ export default (
         </a>
         , um dein Anliegen zu bearbeiten und mit dir zu kommunizieren.
         <br />
-        Wir <strong>verwenden</strong> diese Daten <strong>nicht</strong> für andere Zwecke und 
-        <strong>löschen</strong> sie, sobald sie für die Bearbeitung nicht mehr benötigt werden,
+        Wir <strong>verwenden</strong> diese Daten <strong>nicht</strong> für andere Zwecke und{' '}
+        <strong>löschen</strong> sie, sobald sie für die Bearbeitung nicht mehr benötigt werden,
         sofern keine gesetzlichen Aufbewahrungsfristen entgegenstehen.
       </p>
       <h3 style={{ textAlign: 'left' }}>Deine Rechte</h3>
       <p style={{ textAlign: 'left' }}>
-        Du hast nach den geltenden Datenschutzvorschriften unter anderem das Recht auf 
-        <strong>Auskunft</strong> über deine gespeicherten Daten, das Recht auf 
-        <strong>Berichtigung</strong>, <strong>Löschung</strong> oder 
-        <strong>Einschränkung der Verarbeitung</strong> sowie das Recht, der Verarbeitung zu
-        widersprechen und die <strong>Übertragbarkeit</strong> deiner Daten zu verlangen. Wenn du
+        Du hast nach den geltenden Datenschutzvorschriften unter anderem das Recht auf{' '}
+        <strong>Auskunft</strong> über deine gespeicherten Daten, das Recht auf{' '}
+        <strong>Berichtigung</strong>, <strong>Löschung</strong> oder{' '}
+        <strong>Einschränkung der Verarbeitung</strong> sowie das Recht, der Verarbeitung zu
+        widersprechen und die <strong>Übertragbarkeit</strong> deiner Daten zu verlangen. Wenn du
         uns eine Einwilligung in die Verarbeitung deiner Daten erteilt hast, kannst du diese
         jederzeit mit Wirkung für die Zukunft widerrufen. Darüber hinaus hast du die Möglichkeit,
-        bei unserer 
+        bei unserer{' '}
         <a
           href={'https://datenschutz-hamburg.de/'}
           target={'_blank'}
           rel={'noopener noreferrer'}
         >
           zuständigen Aufsichtsbehörde
-        </a>
-         Beschwerde einzulegen.
+        </a>{' '}
+        Beschwerde einzulegen.
       </p>
       <h3 style={{ textAlign: 'left' }}>Schlusswort</h3>
       <p style={{ textAlign: 'left' }}>
-        Falls du Fragen hast oder von deinen Rechten Gebrauch machen willst, melde dich gerne unter 
+        Falls du Fragen hast oder von deinen Rechten Gebrauch machen willst, melde dich gerne unter{' '}
         <a href={'mailto:datenschutz@xiphe.net'}>datenschutz@xiphe.net</a>. Wir freuen uns über
         konstruktiven Austausch.
       </p>
