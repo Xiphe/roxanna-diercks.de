@@ -421,11 +421,15 @@ export function Image(handle: Handle<ImageProps>) {
             class="image-color"
             style={{
               width: '100%',
-              alignSelf: !p.align && p.rounded === 'top' ? 'flex-end' : undefined,
+              alignSelf:
+                p.variant !== 'decorative' && !p.align && p.rounded === 'top'
+                  ? 'flex-end'
+                  : undefined,
             }}
           >
             <div
               class="image-spacing"
+              style={{ paddingInline: p.paddingInline }}
               data-variant={p.variant}
               data-rounded={p.rounded}
               data-edge={!p.align || undefined}
