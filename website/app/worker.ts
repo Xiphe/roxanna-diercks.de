@@ -12,7 +12,10 @@ async function media(request: Request, env: Env): Promise<Response | undefined> 
     return new Response('Method not allowed', { status: 405, headers: { Allow: 'GET, HEAD' } })
   const key = decodeURIComponent(path.slice(7))
   if (key.includes('..') || key.includes('\\')) return new Response('Not found', { status: 404 })
-  const object = await env.MEDIA.get(key, { range: request.headers, onlyIf: request.headers })
+  const object = await env.MEDIA.get(key, {
+    range: request.headers.has('Range') ? request.headers : undefined,
+    onlyIf: request.headers,
+  })
   if (!object) return new Response('Not found', { status: 404 })
   const headers = new Headers({
     'Cache-Control': 'public, max-age=31536000, immutable',
@@ -27,7 +30,12 @@ async function media(request: Request, env: Env): Promise<Response | undefined> 
       headers,
     })
   let status = 200
-  if (object.range && 'offset' in object.range && 'length' in object.range) {
+  if (
+    request.headers.has('Range') &&
+    object.range &&
+    'offset' in object.range &&
+    'length' in object.range
+  ) {
     status = 206
     headers.set(
       'Content-Range',

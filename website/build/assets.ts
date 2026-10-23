@@ -1,4 +1,6 @@
 import { execFileSync } from 'node:child_process'
+import { createHash } from 'node:crypto'
+import sharp from 'sharp'
 import { build } from 'esbuild'
 import { cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 execFileSync(
@@ -52,6 +54,10 @@ const assets = Object.fromEntries(
     ]),
 )
 await mkdir('dist/font', { recursive: true })
+const favicon = await sharp('website/app/assets/star.svg').resize(32, 32).png().toBuffer()
+assets.favicon =
+  '/assets/favicon-' + createHash('sha256').update(favicon).digest('hex').slice(0, 16) + '.png'
+await writeFile('dist' + assets.favicon, favicon)
 for (const font of ['playfair-display', 'poppins-200', 'poppins-600'])
   await cp('website/app/assets/' + font + '.woff2', 'dist/font/' + font + '.woff2')
 for (const file of ['star', 'instagram', 'pinterest'])

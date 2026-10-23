@@ -79,6 +79,12 @@ export function Page(handle: Handle<{ title: string; body: RemixNode; noindex?: 
           />
           <link
             rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href={assets.favicon}
+          />
+          <link
+            rel="icon"
             type="image/svg+xml"
             href={site.media[site.favicon]?.src}
           />

@@ -90,6 +90,8 @@ test('Worker validates signup input, protects request boundaries, sends DOI and 
   assert.equal(partial.headers.get('Content-Range'), 'bytes 2-5/10')
   assert.equal(await partial.text(), 'cdef')
   const fresh = await runtime.dispatchFetch('https://example.com/media/video-fixture.mp4')
+  assert.equal(fresh.status, 200)
+  assert.equal(fresh.headers.get('Content-Range'), null)
   const etag = fresh.headers.get('ETag')!
   await fresh.body?.cancel()
   assert.equal(
