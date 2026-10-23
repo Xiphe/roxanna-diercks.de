@@ -24,10 +24,22 @@ for (const id of [3, 6, 9]) {
   const r = await request('/contacts/lists/' + id)
   if (!r.ok) throw new Error('Brevo signup list check failed (HTTP ' + r.status + ').')
 }
+// DOI delivery uses a transactional template even though its endpoint is under Contacts.
+// https://developers.brevo.com/reference/get-smtp-template
+const template = await request('/smtp/templates/6')
+if (!template.ok)
+  throw new Error(
+    'Brevo transactional-template access check failed (HTTP ' +
+      template.status +
+      '). Set Transactional email: All alongside Contacts: All.',
+  )
 // An empty body must fail validation, without identifying or creating a contact.
+// It does not verify sending rights: Contacts-only keys passed this probe but failed real delivery.
 const probe = await request('/contacts/doubleOptinConfirmation', { method: 'POST', body: '{}' })
 if (probe.status !== 400)
-  throw new Error('Brevo DOI endpoint access could not be verified (HTTP ' + probe.status + ').')
+  throw new Error(
+    'Brevo DOI validation probe returned an unexpected status (HTTP ' + probe.status + ').',
+  )
 if (!nameAttribute)
   throw new Error(
     'No existing first-name attribute found. Available attribute names: ' +
@@ -37,7 +49,7 @@ if (process.env.GITHUB_OUTPUT)
   appendFileSync(process.env.GITHUB_OUTPUT, `name_attribute=${nameAttribute}\n`)
 console.log('Brevo first-name mapping: ' + nameAttribute)
 console.log(
-  'Brevo Contacts, list IDs, attribute mapping and DOI endpoint validation checked; no email sent. A real confirmation remains an acceptance check.',
+  'Brevo Contacts, lists, attributes and transactional-template read access checked; no email sent. The empty DOI validation probe does not verify sending rights. Real confirmation delivery remains an acceptance check.',
 )
 
 export {}
