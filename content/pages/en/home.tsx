@@ -156,8 +156,7 @@ export default (
         imagesOnly={false}
       >
         <Image
-          image={'Kompass'}
-          tint="white"
+          image={'Kompass.svg'}
           paddingInline="0"
           rounded={'none'}
           align={'center'}

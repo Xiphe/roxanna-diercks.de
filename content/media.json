@@ -130,5 +130,11 @@
     "alt": { "en": "Calm waves on a beach, slowly moving back and forward" },
     "width": 1280,
     "height": 720
+  },
+  "Kompass.svg": {
+    "type": "image/svg+xml",
+    "alt": { "de": "Kompassrose", "en": "Compass rose" },
+    "width": 980,
+    "height": 994
   }
 }
