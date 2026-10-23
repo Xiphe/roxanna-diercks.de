@@ -58,13 +58,16 @@ export async function subscribe(
           typeof error?.code === 'string' && /^[a-z_]{1,64}$/.test(error.code)
             ? error.code
             : 'unknown',
-        category: detail.includes('template')
-          ? 'template'
-          : detail.includes('permission') || detail.includes('access')
-            ? 'permissions'
-            : detail.includes('ip') && detail.includes('authoriz')
-              ? 'ip_allowlist'
-              : 'other',
+        category:
+          detail.includes('smtp') && detail.includes('not') && detail.includes('activat')
+            ? 'account_inactive'
+            : detail.includes('template')
+              ? 'template'
+              : detail.includes('permission') || detail.includes('access')
+                ? 'permissions'
+                : detail.includes('ip') && detail.includes('authoriz')
+                  ? 'ip_allowlist'
+                  : 'other',
       }),
     )
   }
