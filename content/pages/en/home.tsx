@@ -297,7 +297,7 @@ export default (
           top={false}
           bottom={true}
         >
-          <p>
+          <p style={{ textAlign: 'center' }}>
             <Button
               href={'/en/between-words'}
               size={'normal'}
