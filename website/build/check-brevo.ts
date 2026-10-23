@@ -1,6 +1,8 @@
+import { appendFileSync } from 'node:fs'
+
 // Run in CI, where the secret is available. These checks never send mail.
 const key = process.env.BREVO_API_KEY
-if (!key) throw new Error('Set the repository Actions secret BREVO_API_KEY.')
+if (!key) throw new Error('Set the production environment Actions secret BREVO_API_KEY.')
 const origin = 'https://api.brevo.com/v3'
 const request = (path: string, options: RequestInit = {}) =>
   fetch(origin + path, {
@@ -14,8 +16,10 @@ if (!attributes.ok)
   throw new Error('Brevo Contacts access check failed (HTTP ' + attributes.status + ').')
 const body = (await attributes.json()) as { attributes: { name: string }[] }
 const names = new Set(body.attributes.map((a) => a.name))
-for (const name of ['LOCALE', 'FIRSTNAME'])
-  if (!names.has(name)) throw new Error('Brevo contact attribute missing: ' + name)
+if (!names.has('LOCALE')) throw new Error('Brevo contact attribute missing: LOCALE')
+const nameAttribute = ['FIRSTNAME', 'FIRST_NAME', 'FNAME', 'VORNAME', 'PRENOM', 'NAME'].find(
+  (name) => names.has(name),
+)
 for (const id of [3, 6, 9]) {
   const r = await request('/contacts/lists/' + id)
   if (!r.ok) throw new Error('Brevo signup list check failed (HTTP ' + r.status + ').')
@@ -24,6 +28,14 @@ for (const id of [3, 6, 9]) {
 const probe = await request('/contacts/doubleOptinConfirmation', { method: 'POST', body: '{}' })
 if (probe.status !== 400)
   throw new Error('Brevo DOI endpoint access could not be verified (HTTP ' + probe.status + ').')
+if (!nameAttribute)
+  throw new Error(
+    'No existing first-name attribute found. Available attribute names: ' +
+      [...names].sort().join(', '),
+  )
+if (process.env.GITHUB_OUTPUT)
+  appendFileSync(process.env.GITHUB_OUTPUT, `name_attribute=${nameAttribute}\n`)
+console.log('Brevo first-name mapping: ' + nameAttribute)
 console.log(
   'Brevo Contacts, list IDs, attribute mapping and DOI endpoint validation checked; no email sent. A real confirmation remains an acceptance check.',
 )

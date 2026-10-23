@@ -26,7 +26,11 @@ test('Worker validates signup input, protects request boundaries, sends DOI and 
         CONTENT_STATE: { className: 'ContentState', useSQLite: true },
         SIGNUP_LIMITS: { className: 'SignupLimits', useSQLite: true },
       },
-      bindings: { CMX_PUBLISH_PUBLIC_KEYS: '{}', BREVO_API_KEY: 'test-only-key' },
+      bindings: {
+        CMX_PUBLISH_PUBLIC_KEYS: '{}',
+        BREVO_API_KEY: 'test-only-key',
+        BREVO_NAME_ATTRIBUTE: 'FNAME',
+      },
       r2Buckets: ['MEDIA'],
       outboundService: async (request) => {
         assert.equal(request.url, 'https://api.brevo.com/v3/contacts/doubleOptinConfirmation')
@@ -62,7 +66,7 @@ test('Worker validates signup input, protects request boundaries, sends DOI and 
     templateId: 6,
     redirectionUrl:
       'https://roxanna-diercks.de/fixture?newsletterSuccess=fixture-signup#signup-fixture-signup',
-    attributes: { LOCALE: 'en', FIRSTNAME: 'Ada' },
+    attributes: { LOCALE: 'en', FNAME: 'Ada' },
   })
   assert.equal((await submit({ email: 'reader@example.org' })).status, 429)
   assert.equal(deliveries.length, 1)

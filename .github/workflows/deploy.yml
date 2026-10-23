@@ -65,13 +65,15 @@ jobs:
       - run: npx playwright install --with-deps --only-shell chromium
       - run: npm run check:website
       - name: Check Brevo access without sending mail
+        id: brevo
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
         run: node website/build/check-brevo.ts
       - name: Deploy website
         env:
           CMX_PUBLISH_PUBLIC_KEYS: ${{ vars.CMX_PUBLISH_PUBLIC_KEYS }}
-        run: npm run deploy -- --var "CMX_PUBLISH_PUBLIC_KEYS:$CMX_PUBLISH_PUBLIC_KEYS"
+          BREVO_NAME_ATTRIBUTE: ${{ steps.brevo.outputs.name_attribute }}
+        run: npm run deploy -- --var "CMX_PUBLISH_PUBLIC_KEYS:$CMX_PUBLISH_PUBLIC_KEYS" --var "BREVO_NAME_ATTRIBUTE:$BREVO_NAME_ATTRIBUTE"
       - name: Install Brevo runtime secret
         env:
           BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}

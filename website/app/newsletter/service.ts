@@ -22,6 +22,7 @@ export async function subscribe(
   key: string,
   origin: string,
   fetcher: typeof fetch = fetch,
+  nameAttribute = 'FIRSTNAME',
 ) {
   const redirect = new URL(config.path, origin)
   redirect.searchParams.set('newsletterSuccess', config.id)
@@ -38,7 +39,7 @@ export async function subscribe(
       redirectionUrl: redirect.href,
       attributes: {
         LOCALE: config.locale,
-        ...(input.name ? { FIRSTNAME: input.name } : {}),
+        ...(input.name ? { [nameAttribute]: input.name } : {}),
         ...(input.surname ? { LASTNAME: input.surname } : {}),
       },
     }),

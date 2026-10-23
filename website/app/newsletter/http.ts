@@ -83,7 +83,16 @@ export async function handleNewsletter(
       { status: 429, headers: { ...headers, 'Retry-After': '60' } },
     )
   try {
-    if (!(await subscribe(config, input, env.BREVO_API_KEY, 'https://roxanna-diercks.de')))
+    if (
+      !(await subscribe(
+        config,
+        input,
+        env.BREVO_API_KEY,
+        'https://roxanna-diercks.de',
+        fetch,
+        env.BREVO_NAME_ATTRIBUTE || 'FIRSTNAME',
+      ))
+    )
       return fail(502)
   } catch {
     return fail(502)
