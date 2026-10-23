@@ -44,5 +44,29 @@ export async function subscribe(
       },
     }),
   })
+  if (!response.ok) {
+    const error = (await response.json().catch(() => null)) as {
+      code?: unknown
+      message?: unknown
+    } | null
+    const detail = typeof error?.message === 'string' ? error.message.toLowerCase() : ''
+    console.error(
+      JSON.stringify({
+        message: 'Brevo DOI request rejected',
+        status: response.status,
+        code:
+          typeof error?.code === 'string' && /^[a-z_]{1,64}$/.test(error.code)
+            ? error.code
+            : 'unknown',
+        category: detail.includes('template')
+          ? 'template'
+          : detail.includes('permission') || detail.includes('access')
+            ? 'permissions'
+            : detail.includes('ip') && detail.includes('authoriz')
+              ? 'ip_allowlist'
+              : 'other',
+      }),
+    )
+  }
   return response.ok
 }
