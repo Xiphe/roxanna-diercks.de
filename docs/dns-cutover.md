@@ -1,8 +1,8 @@
 # DNS switch preparation: roxanna-diercks.de
 
-Prepared on 24 October 2026. The user requested a reviewable Cloudflare zone and will change the registrar nameservers after comparing the records. The public delegation still points to INWX; production has not switched.
+Prepared and delegated on 24 October 2026. The user changed the registrar nameservers; DENIC confirms the assigned Cloudflare nameservers. Cloudflare activated the zone at 17:33:48 CEST. Public resolver caches still contain mixed old/new answers. DNS and production HTTPS verification pass. The active Universal SSL certificate covers the apex and WWW. Some clients may still see the previous site until cached DNS answers expire.
 
-Cloudflare zone: **Free**, status **pending**. Assigned nameservers:
+Cloudflare zone: **Free**, status **active**. Assigned nameservers:
 
 - `dane.ns.cloudflare.com`
 - `lady.ns.cloudflare.com`
@@ -48,7 +48,7 @@ The existing recipe sites `rezepte.roxanna-diercks.de` (DE), `recipes.roxanna-di
 
 **Proxy policy:** external services must use DNS only. Cloudflare proxying is reserved for services hosted by Cloudflare. The only proxied records in this zone are the apex and WWW Custom Domains of Worker `roxanna-diercks`.
 
-## Website changes at activation
+## Website routing
 
 | Host                     | Existing DNS result | Prepared destination                             |
 | ------------------------ | ------------------- | ------------------------------------------------ |
@@ -67,10 +67,11 @@ Custom Domain bindings and the redirect are managed in Cloudflare. GitHub Action
 - All 22 Cloudflare records were read back. The three recipe Vercel CNAMEs (`rezepte`, `recipes`, `recetas`) are DNS only, TTL 3600. The wildcard and obsolete `en` subdomain are absent.
 - Both enabled Custom Domains point to Worker `roxanna-diercks`.
 - The redirect rule was read back with status 308 and query preservation enabled.
-- Public DNS still points to the old INWX nameservers and old website address. Google and Cloudflare public resolvers agree on apex A, MX and delegation; neither returned a parent DS record. DNSSEC is disabled in the new zone.
-- Cloudflare automatically requested certificates for the Worker domains. Their current status is `pending_validation`. HTTPS on the new custom domains has not yet been verified. Validate issuance and activation during the switch; a delay before HTTPS is ready remains possible.
+- DENIC confirms the Cloudflare nameserver delegation (registrar update at 17:31:19 CEST). Cloudflare activated the zone at 17:33:48 CEST. Public resolvers still have mixed cached answers: some return the old INWX nameservers or Vercel A result, while fresh answers already return Cloudflare addresses. No parent DS record was returned; DNSSEC remains disabled.
+- All 20 preserved service records also passed public DNS checks, including every MX, SPF, DKIM, DMARC, recipe CNAME and verification TXT value.
+- Universal SSL is **active** for the apex and first-level subdomains, covering both production hosts. The two automatically requested Worker Advanced Certificate packs still show `pending_validation`; they do not block the verified HTTPS service because Universal SSL already covers these hosts. Initial TLS handshakes failed while issuance was pending, then succeeded with certificate verification enabled after Universal SSL became active. The production checks were pinned to the new Cloudflare edge (`104.21.30.64`) to avoid stale resolver answers reaching Vercel.
 - The user provided the complete INWX AXFR export (serial `2026070613`, captured 24 October 2026 at 17:25:17 CEST (15:25:17 UTC)). Its split Uberspace TXT chunks were concatenated before comparison; the full DKIM value matches. Opening/closing duplicate SOA records were counted once. The passing comparison applies to this supplied snapshot; later changes at INWX must also be mirrored before switching.
-- Keep the INWX zone and existing hosting for rollback. After delegation changes, verify active zone/certificates, website and media, WWW/query redirects, MX, SPF, all DKIM selectors, DMARC and newsletter confirmation URLs. No additional test email was sent for DNS preparation.
+- Keep the INWX zone and existing hosting for rollback. Production checks passed: health, all 17 content routes including the noindex legal pages, canonicals and production indexing headers, robots/sitemap, six representative immutable media URLs, `/de` canonicalization, expected 404s, and the HTTPS WWW 308 redirect with query preservation. The existing newsletter confirmation URL returns the correct page and signup anchor on the production origin; its client-rendered success message and hidden form were also verified on the same Worker through the workers.dev endpoint. Plain HTTP redirect probing was blocked by this machine’s outbound proxy; the zone redirect rule was read back from Cloudflare and the HTTPS WWW path was verified live. No additional test email was sent. GitHub Actions publication/health transport remains on the existing stable workers.dev endpoint during DNS convergence.
 
 ## Files
 
@@ -79,8 +80,11 @@ Custom Domain bindings and the redirect are managed in Cloudflare. GitHub Action
 - [Cloudflare BIND zone export](dns/2026-10-24-cloudflare-export.zone)
 - [Complete original INWX zone export](dns/2026-10-24-inwx-export.zone)
 - [Machine-readable AXFR comparison](dns/2026-10-24-inwx-comparison.json)
+- [Activation checkpoint](dns/2026-10-24-activation-check.json)
+- [Public service-record checks](dns/2026-10-24-public-record-check.json)
+- [TLS-verified production checks](dns/2026-10-24-production-check.json)
 - [Observed existing DNS answers](dns/2026-10-24-inwx-observed.json)
 
 Review locally with `sand code /workspace/roxanna-diercks.de/docs/dns-cutover.md`.
 
-Cloudflare references: [Custom Domains](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/), [certificate statuses](https://developers.cloudflare.com/ssl/reference/certificate-statuses/), [DNS record scan](https://developers.cloudflare.com/api/resources/dns/subresources/records/methods/scan_trigger/).
+Cloudflare references: [Custom Domains](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/), [certificate statuses](https://developers.cloudflare.com/ssl/reference/certificate-statuses/), [Universal SSL provisioning](https://developers.cloudflare.com/ssl/edge-certificates/universal-ssl/enable-universal-ssl/), [DNS record scan](https://developers.cloudflare.com/api/resources/dns/subresources/records/methods/scan_trigger/).

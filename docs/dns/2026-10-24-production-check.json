@@ -1,0 +1,138 @@
+{
+  "health": 200,
+  "tlsVerified": true,
+  "edge": "104.21.30.64",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/en",
+      "status": 200
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200
+    },
+    {
+      "path": "/de_old",
+      "status": 404
+    },
+    {
+      "path": "/not-a-real-page",
+      "status": 404
+    },
+    {
+      "path": "/de",
+      "status": 308
+    },
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/blog/bleiben-wenn-du-gehen-moechtest",
+      "status": 200
+    },
+    {
+      "path": "/blog/schreiben-bei-trauer",
+      "status": 200
+    },
+    {
+      "path": "/datenschutz",
+      "status": 200
+    },
+    {
+      "path": "/en",
+      "status": 200
+    },
+    {
+      "path": "/en/about",
+      "status": 200
+    },
+    {
+      "path": "/en/between-words",
+      "status": 200
+    },
+    {
+      "path": "/en/blog/how-to-stay-when-you-want-to-run",
+      "status": 200
+    },
+    {
+      "path": "/en/blog/writing-through-grief",
+      "status": 200
+    },
+    {
+      "path": "/en/grief-in-the-workplace",
+      "status": 200
+    },
+    {
+      "path": "/en/pet-loss-support",
+      "status": 200
+    },
+    {
+      "path": "/impressum",
+      "status": 200
+    },
+    {
+      "path": "/support",
+      "status": 200
+    },
+    {
+      "path": "/tiertrauer",
+      "status": 200
+    },
+    {
+      "path": "/trauer-im-unternehmen",
+      "status": 200
+    },
+    {
+      "path": "/ueber-mich",
+      "status": 200
+    },
+    {
+      "path": "/zwischen-den-zeilen",
+      "status": 200
+    }
+  ],
+  "media": [
+    {
+      "path": "/media/images/Roxy-mit-Zitrone-2560-334e55abf50cb0e9.webp",
+      "status": 200
+    },
+    {
+      "path": "/media/images/loekken_drone-1665-f419a052396b65b1.webp",
+      "status": 200
+    },
+    {
+      "path": "/media/images/waves-2560-f363dbb6495487c8.webp",
+      "status": 200
+    },
+    {
+      "path": "/media/originals/Kompass-aecd870f01d4f471.svg",
+      "status": 200
+    },
+    {
+      "path": "/media/originals/star_light-50b44778f1948583.svg",
+      "status": 200
+    },
+    {
+      "path": "/media/originals/waves_full-a7a492164702df03.mp4",
+      "status": 200
+    }
+  ],
+  "wwwRedirect": {
+    "status": 308,
+    "location": "https://roxanna-diercks.de/en?newsletterSuccess=cutover-check"
+  },
+  "existingConfirmationURL": {
+    "status": 200,
+    "matchingSignupAnchor": true
+  },
+  "passed": true
+}

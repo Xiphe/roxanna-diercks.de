@@ -1,0 +1,105 @@
+{
+  "records": [
+    {
+      "name": "_dmarc.roxanna-diercks.de",
+      "type": "TXT",
+      "matches": true
+    },
+    {
+      "name": "brevo1._domainkey.roxanna-diercks.de",
+      "type": "CNAME",
+      "matches": true
+    },
+    {
+      "name": "brevo2._domainkey.roxanna-diercks.de",
+      "type": "CNAME",
+      "matches": true
+    },
+    {
+      "name": "cfdc7c55c1521b91fb1400f957bbf5591e7e9c67.roxanna-diercks.de",
+      "type": "TXT",
+      "matches": true
+    },
+    {
+      "name": "mbo0001._domainkey.roxanna-diercks.de",
+      "type": "CNAME",
+      "matches": true
+    },
+    {
+      "name": "mbo0002._domainkey.roxanna-diercks.de",
+      "type": "CNAME",
+      "matches": true
+    },
+    {
+      "name": "mbo0003._domainkey.roxanna-diercks.de",
+      "type": "CNAME",
+      "matches": true
+    },
+    {
+      "name": "mbo0004._domainkey.roxanna-diercks.de",
+      "type": "CNAME",
+      "matches": true
+    },
+    {
+      "name": "recetas.roxanna-diercks.de",
+      "type": "CNAME",
+      "matches": true
+    },
+    {
+      "name": "recipes.roxanna-diercks.de",
+      "type": "CNAME",
+      "matches": true
+    },
+    {
+      "name": "rezepte.roxanna-diercks.de",
+      "type": "CNAME",
+      "matches": true
+    },
+    {
+      "name": "roxanna-diercks.de",
+      "type": "MX",
+      "matches": true
+    },
+    {
+      "name": "roxanna-diercks.de",
+      "type": "MX",
+      "matches": true
+    },
+    {
+      "name": "roxanna-diercks.de",
+      "type": "MX",
+      "matches": true
+    },
+    {
+      "name": "roxanna-diercks.de",
+      "type": "MX",
+      "matches": true
+    },
+    {
+      "name": "roxanna-diercks.de",
+      "type": "TXT",
+      "matches": true
+    },
+    {
+      "name": "roxanna-diercks.de",
+      "type": "TXT",
+      "matches": true
+    },
+    {
+      "name": "roxanna-diercks.de",
+      "type": "TXT",
+      "matches": true
+    },
+    {
+      "name": "roxanna-diercks.de",
+      "type": "TXT",
+      "matches": true
+    },
+    {
+      "name": "uberspace._domainkey.roxanna-diercks.de",
+      "type": "TXT",
+      "matches": true
+    }
+  ],
+  "passed": true
+}

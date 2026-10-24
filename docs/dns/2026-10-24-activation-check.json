@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-10-24T17:52:25.891224+02:00",
+  "phase": "active-verified",
+  "registryNameservers": ["dane.ns.cloudflare.com.", "lady.ns.cloudflare.com."],
+  "zoneStatus": "active",
+  "activatedAt": "2026-10-24T15:33:48.509648Z",
+  "preservedPublicRecords": {
+    "checked": 20,
+    "passed": true
+  },
+  "zoneComparisonPassed": true,
+  "certificates": [
+    {
+      "type": "advanced",
+      "hosts": ["roxanna-diercks.de", "www.roxanna-diercks.de", "*.www.roxanna-diercks.de"],
+      "status": "pending_validation"
+    },
+    {
+      "type": "advanced",
+      "hosts": ["roxanna-diercks.de", "*.roxanna-diercks.de"],
+      "status": "pending_validation"
+    },
+    {
+      "type": "universal",
+      "hosts": ["roxanna-diercks.de", "*.roxanna-diercks.de"],
+      "status": "active"
+    }
+  ],
+  "productionHTTPSVerified": true,
+  "verificationPinnedToCloudflareEdge": "104.21.30.64",
+  "publicResolverCachesMixed": true,
+  "confirmationUI": {
+    "testedAt": "https://roxanna-diercks.cloudflare-sites-f0b.workers.dev/?newsletterSuccess=69ea331e2850143e8ec7d86d#signup-69ea331e2850143e8ec7d86d",
+    "sameWorker": true,
+    "statusText": "Danke f\u00fcr dein Interesse!",
+    "formAbsent": true
+  },
+  "newEmailSent": false
+}
