@@ -1,14 +1,5 @@
 [
   {
-    "name": "*.roxanna-diercks.de",
-    "type": "A",
-    "content": "45.87.158.7",
-    "priority": "",
-    "ttl": 3600,
-    "proxied": false,
-    "source": "Cloudflare scan; manually preserved"
-  },
-  {
     "name": "_dmarc.roxanna-diercks.de",
     "type": "TXT",
     "content": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com",

@@ -1,5 +1,4 @@
 name,type,content,priority,ttl,proxied,source
-*.roxanna-diercks.de,A,45.87.158.7,,3600,False,Cloudflare scan; manually preserved
 _dmarc.roxanna-diercks.de,TXT,v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com,,3600,False,Cloudflare scan; manually preserved
 brevo1._domainkey.roxanna-diercks.de,CNAME,b1.roxanna-diercks-de.dkim.brevo.com,,3600,False,Cloudflare scan; manually preserved
 brevo2._domainkey.roxanna-diercks.de,CNAME,b2.roxanna-diercks-de.dkim.brevo.com,,3600,False,Cloudflare scan; manually preserved

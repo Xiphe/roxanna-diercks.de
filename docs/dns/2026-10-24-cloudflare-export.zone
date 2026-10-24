@@ -1,6 +1,6 @@
 ;;
 ;; Domain:     roxanna-diercks.de.
-;; Exported:   2026-10-24 15:10:30
+;; Exported:   2026-10-24 15:18:33
 ;;
 ;; This file is intended for use for informational and archival
 ;; purposes ONLY and MUST be edited before use on a production
@@ -24,14 +24,11 @@
 ;;
 ;; Use at your own risk.
 ;; SOA Record
-roxanna-diercks.de	3600	IN	SOA	dane.ns.cloudflare.com. dns.cloudflare.com. 2054452123 10000 2400 604800 3600
+roxanna-diercks.de	3600	IN	SOA	dane.ns.cloudflare.com. dns.cloudflare.com. 2054452171 10000 2400 604800 3600
 
 ;; NS Records
 roxanna-diercks.de.	86400	IN	NS	dane.ns.cloudflare.com.
 roxanna-diercks.de.	86400	IN	NS	lady.ns.cloudflare.com.
-
-;; A Records
-*.roxanna-diercks.de.	3600	IN	A	45.87.158.7 ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24) cf_tags=cf-proxied:false
 
 ;; CNAME Records
 brevo1._domainkey.roxanna-diercks.de.	3600	IN	CNAME	b1.roxanna-diercks-de.dkim.brevo.com. ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24) cf_tags=cf-proxied:false
