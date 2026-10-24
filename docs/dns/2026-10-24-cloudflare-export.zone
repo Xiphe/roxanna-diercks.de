@@ -1,0 +1,56 @@
+;;
+;; Domain:     roxanna-diercks.de.
+;; Exported:   2026-10-24 15:10:30
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+roxanna-diercks.de	3600	IN	SOA	dane.ns.cloudflare.com. dns.cloudflare.com. 2054452123 10000 2400 604800 3600
+
+;; NS Records
+roxanna-diercks.de.	86400	IN	NS	dane.ns.cloudflare.com.
+roxanna-diercks.de.	86400	IN	NS	lady.ns.cloudflare.com.
+
+;; A Records
+*.roxanna-diercks.de.	3600	IN	A	45.87.158.7 ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24) cf_tags=cf-proxied:false
+
+;; CNAME Records
+brevo1._domainkey.roxanna-diercks.de.	3600	IN	CNAME	b1.roxanna-diercks-de.dkim.brevo.com. ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24) cf_tags=cf-proxied:false
+brevo2._domainkey.roxanna-diercks.de.	3600	IN	CNAME	b2.roxanna-diercks-de.dkim.brevo.com. ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24) cf_tags=cf-proxied:false
+mbo0001._domainkey.roxanna-diercks.de.	3600	IN	CNAME	mbo0001._domainkey.mailbox.org. ; Preserved from INWX DNS; additional public DNS lookup (2026-10-24) cf_tags=cf-proxied:false
+mbo0002._domainkey.roxanna-diercks.de.	3600	IN	CNAME	mbo0002._domainkey.mailbox.org. ; Preserved from INWX DNS; additional public DNS lookup (2026-10-24) cf_tags=cf-proxied:false
+mbo0003._domainkey.roxanna-diercks.de.	3600	IN	CNAME	mbo0003._domainkey.mailbox.org. ; Preserved from INWX DNS; additional public DNS lookup (2026-10-24) cf_tags=cf-proxied:false
+mbo0004._domainkey.roxanna-diercks.de.	3600	IN	CNAME	mbo0004._domainkey.mailbox.org. ; Preserved from INWX DNS; additional public DNS lookup (2026-10-24) cf_tags=cf-proxied:false
+
+;; MX Records
+roxanna-diercks.de.	3600	IN	MX	10 mxext4.mailbox.org. ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24)
+roxanna-diercks.de.	3600	IN	MX	10 mxext3.mailbox.org. ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24)
+roxanna-diercks.de.	3600	IN	MX	10 mxext2.mailbox.org. ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24)
+roxanna-diercks.de.	3600	IN	MX	10 mxext1.mailbox.org. ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24)
+
+;; TXT Records
+_dmarc.roxanna-diercks.de.	3600	IN	TXT	"v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com" ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24)
+roxanna-diercks.de.	3600	IN	TXT	"v=spf1 include:spf.uberspace.de include:spf.brevo.com include:mailbox.org ~all" ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24)
+roxanna-diercks.de.	3600	IN	TXT	"google-site-verification=cXYf9nKBXWRM3aii8afYsRoQHZRmJekG_Sr8YzRUd-E" ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24)
+roxanna-diercks.de.	3600	IN	TXT	"forward-email=fridolin.diercks@gmail.com" ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24)
+roxanna-diercks.de.	3600	IN	TXT	"brevo-code:abcd82084610ccf4c8ba1143732ad8cf" ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24)
+uberspace._domainkey.roxanna-diercks.de.	3600	IN	TXT	"v=DKIM1;t=s;n=core;p=MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA69mhjXzJW/I2wioMJGWAiTFKWoK4wr2dTcT+a0sxEpJObwdKFGEuaqKslT9cj/ev2ywDfNsoMvxmn8O1vT0qD9DszfkU3ijFo+734qflcV37pwuBunoAiVj4+Qub6GeNsMsGZNBi+ayql216Erui0oSDl2txujyW84gPdEEQDPUOYzq9yBWmmx72dxBQg1" "Jv6udtfOfKUB9bVaBKma9bhUolnsrwu5Xq5+123p2yStBriuiHA/aurhwhK6ih0Xh3nPQycMRuw421ChZErq820rbsUeeTLTpW6qjjEY0m3SjKpc2FMhLWmrBWt/d1dcJE7taxXAsl5GL0AAbh8E0x8ux/ioN4z0J+HNGY75QKqqI9+a85xPgYJ3WjfarPSGNEJa+zwd09tFQhucNLXEHQ8wRZMo4QQ4VJmRkHsUkJMT+8qZ9U5onPoVKoeVfB9" "o5Hano62Nilm8G1oVTRq8xmF7KHEa9OE1Neb6XG1k703ClfuVU5FEO0NLlYlAPC3KYwRA5exErUMeSb2QrNR3lhMUI/2Kvdtdm9UQjtby7HL1xsBJ72YRE5YHXRbkarwkGgL3ZX+HntvZ8LXYs+jDOyjhynrikjBuZz78WPmJ2nZ7+75kadHX+70SwyijtxhktSCBqBgumr0U+bIkfZNPy94yeeHZ7g+HM5b41QP9Ek15MCAwEAAQ==" ; Preserved from INWX DNS; additional public DNS lookup (2026-10-24)

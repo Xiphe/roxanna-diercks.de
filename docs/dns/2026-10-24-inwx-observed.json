@@ -1,0 +1,645 @@
+[
+  {
+    "name": "roxanna-diercks.de",
+    "type": "NS",
+    "status": 0,
+    "answers": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 2,
+        "TTL": 21600,
+        "data": "ns2.inwx.de."
+      },
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 2,
+        "TTL": 21600,
+        "data": "ns3.inwx.eu."
+      },
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 2,
+        "TTL": 21600,
+        "data": "ns.inwx.de."
+      }
+    ],
+    "authority": [],
+    "ad": false
+  },
+  {
+    "name": "roxanna-diercks.de",
+    "type": "SOA",
+    "status": 0,
+    "answers": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 6,
+        "TTL": 21600,
+        "data": "ns.inwx.de. hostmaster.inwx.de. 2026070613 10800 3600 604800 3600"
+      }
+    ],
+    "authority": [],
+    "ad": false
+  },
+  {
+    "name": "roxanna-diercks.de",
+    "type": "A",
+    "status": 0,
+    "answers": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 1,
+        "TTL": 3600,
+        "data": "216.198.79.1"
+      }
+    ],
+    "authority": [],
+    "ad": false
+  },
+  {
+    "name": "roxanna-diercks.de",
+    "type": "AAAA",
+    "status": 0,
+    "answers": [],
+    "authority": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 6,
+        "TTL": 1800,
+        "data": "ns.inwx.de. hostmaster.inwx.de. 2026070613 10800 3600 604800 3600"
+      }
+    ],
+    "ad": false
+  },
+  {
+    "name": "roxanna-diercks.de",
+    "type": "MX",
+    "status": 0,
+    "answers": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 15,
+        "TTL": 3600,
+        "data": "10 mxext3.mailbox.org."
+      },
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 15,
+        "TTL": 3600,
+        "data": "10 mxext1.mailbox.org."
+      },
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 15,
+        "TTL": 3600,
+        "data": "10 mxext2.mailbox.org."
+      },
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 15,
+        "TTL": 3600,
+        "data": "10 mxext4.mailbox.org."
+      }
+    ],
+    "authority": [],
+    "ad": false
+  },
+  {
+    "name": "roxanna-diercks.de",
+    "type": "TXT",
+    "status": 0,
+    "answers": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 16,
+        "TTL": 3600,
+        "data": "brevo-code:abcd82084610ccf4c8ba1143732ad8cf"
+      },
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 16,
+        "TTL": 3600,
+        "data": "forward-email=fridolin.diercks@gmail.com"
+      },
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 16,
+        "TTL": 3600,
+        "data": "google-site-verification=cXYf9nKBXWRM3aii8afYsRoQHZRmJekG_Sr8YzRUd-E"
+      },
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 16,
+        "TTL": 3600,
+        "data": "v=spf1 include:spf.uberspace.de include:spf.brevo.com include:mailbox.org ~all"
+      }
+    ],
+    "authority": [],
+    "ad": false
+  },
+  {
+    "name": "roxanna-diercks.de",
+    "type": "CAA",
+    "status": 0,
+    "answers": [],
+    "authority": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 6,
+        "TTL": 1800,
+        "data": "ns.inwx.de. hostmaster.inwx.de. 2026070613 10800 3600 604800 3600"
+      }
+    ],
+    "ad": false
+  },
+  {
+    "name": "roxanna-diercks.de",
+    "type": "DS",
+    "status": 0,
+    "answers": [],
+    "authority": [
+      {
+        "name": "de.",
+        "type": 6,
+        "TTL": 1800,
+        "data": "f.nic.de. dns-operations.denic.de. 1792854271 7200 7200 3600000 7200"
+      }
+    ],
+    "ad": false
+  },
+  {
+    "name": "www.roxanna-diercks.de",
+    "type": "A",
+    "status": 0,
+    "answers": [
+      {
+        "name": "www.roxanna-diercks.de.",
+        "type": 1,
+        "TTL": 3600,
+        "data": "45.87.158.7"
+      }
+    ],
+    "authority": [],
+    "ad": false
+  },
+  {
+    "name": "www.roxanna-diercks.de",
+    "type": "AAAA",
+    "status": 0,
+    "answers": [],
+    "authority": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 6,
+        "TTL": 1800,
+        "data": "ns.inwx.de. hostmaster.inwx.de. 2026070613 10800 3600 604800 3600"
+      }
+    ],
+    "ad": false
+  },
+  {
+    "name": "www.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 0,
+    "answers": [],
+    "authority": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 6,
+        "TTL": 1800,
+        "data": "ns.inwx.de. hostmaster.inwx.de. 2026070613 10800 3600 604800 3600"
+      }
+    ],
+    "ad": false
+  },
+  {
+    "name": "_dmarc.roxanna-diercks.de",
+    "type": "TXT",
+    "status": 0,
+    "answers": [
+      {
+        "name": "_dmarc.roxanna-diercks.de.",
+        "type": 16,
+        "TTL": 3600,
+        "data": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com"
+      }
+    ],
+    "authority": [],
+    "ad": false
+  },
+  {
+    "name": "_mta-sts.roxanna-diercks.de",
+    "type": "TXT",
+    "status": 0,
+    "answers": [],
+    "authority": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 6,
+        "TTL": 1800,
+        "data": "ns.inwx.de. hostmaster.inwx.de. 2026070613 10800 3600 604800 3600"
+      }
+    ],
+    "ad": false
+  },
+  {
+    "name": "_smtp._tls.roxanna-diercks.de",
+    "type": "TXT",
+    "status": 0,
+    "answers": [],
+    "authority": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 6,
+        "TTL": 1800,
+        "data": "ns.inwx.de. hostmaster.inwx.de. 2026070613 10800 3600 604800 3600"
+      }
+    ],
+    "ad": false
+  },
+  {
+    "name": "mail.roxanna-diercks.de",
+    "type": "A",
+    "status": 0,
+    "answers": [
+      {
+        "name": "mail.roxanna-diercks.de.",
+        "type": 1,
+        "TTL": 3600,
+        "data": "45.87.158.7"
+      }
+    ],
+    "authority": [],
+    "ad": false
+  },
+  {
+    "name": "autodiscover.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 0,
+    "answers": [],
+    "authority": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 6,
+        "TTL": 1800,
+        "data": "ns.inwx.de. hostmaster.inwx.de. 2026070613 10800 3600 604800 3600"
+      }
+    ],
+    "ad": false
+  },
+  {
+    "name": "autoconfig.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 0,
+    "answers": [],
+    "authority": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 6,
+        "TTL": 1800,
+        "data": "ns.inwx.de. hostmaster.inwx.de. 2026070613 10800 3600 604800 3600"
+      }
+    ],
+    "ad": false
+  },
+  {
+    "name": "brevo1._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 0,
+    "answers": [
+      {
+        "name": "brevo1._domainkey.roxanna-diercks.de.",
+        "type": 5,
+        "TTL": 3600,
+        "data": "b1.roxanna-diercks-de.dkim.brevo.com."
+      }
+    ],
+    "authority": [],
+    "ad": false
+  },
+  {
+    "name": "brevo2._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 0,
+    "answers": [
+      {
+        "name": "brevo2._domainkey.roxanna-diercks.de.",
+        "type": 5,
+        "TTL": 3600,
+        "data": "b2.roxanna-diercks-de.dkim.brevo.com."
+      }
+    ],
+    "authority": [],
+    "ad": false
+  },
+  {
+    "name": "mail._domainkey.roxanna-diercks.de",
+    "type": "TXT",
+    "status": 3,
+    "answers": [],
+    "authority": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 6,
+        "TTL": 1800,
+        "data": "ns.inwx.de. hostmaster.inwx.de. 2026070613 10800 3600 604800 3600"
+      }
+    ],
+    "ad": false
+  },
+  {
+    "name": "default._domainkey.roxanna-diercks.de",
+    "type": "TXT",
+    "status": 3,
+    "answers": [],
+    "authority": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 6,
+        "TTL": 1800,
+        "data": "ns.inwx.de. hostmaster.inwx.de. 2026070613 10800 3600 604800 3600"
+      }
+    ],
+    "ad": false
+  },
+  {
+    "name": "selector1._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 3,
+    "answers": [],
+    "authority": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 6,
+        "TTL": 1800,
+        "data": "ns.inwx.de. hostmaster.inwx.de. 2026070613 10800 3600 604800 3600"
+      }
+    ],
+    "ad": false
+  },
+  {
+    "name": "selector2._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 3,
+    "answers": [],
+    "authority": [
+      {
+        "name": "roxanna-diercks.de.",
+        "type": 6,
+        "TTL": 1800,
+        "data": "ns.inwx.de. hostmaster.inwx.de. 2026070613 10800 3600 604800 3600"
+      }
+    ],
+    "ad": false
+  },
+  {
+    "name": "MBO0001._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 0,
+    "answers": [
+      {
+        "name": "MBO0001._domainkey.roxanna-diercks.de.",
+        "type": 5,
+        "TTL": 3600,
+        "data": "mbo0001._domainkey.mailbox.org."
+      }
+    ]
+  },
+  {
+    "name": "MBO0001._domainkey.roxanna-diercks.de",
+    "type": "TXT",
+    "status": 0,
+    "answers": [
+      {
+        "name": "MBO0001._domainkey.roxanna-diercks.de.",
+        "type": 5,
+        "TTL": 3600,
+        "data": "mbo0001._domainkey.mailbox.org."
+      },
+      {
+        "name": "mbo0001._domainkey.mailbox.org.",
+        "type": 16,
+        "TTL": 300,
+        "data": "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2K4PavXoNY8eGK2u61LIQlOHS8f5sWsCK5b+HMOfo0M+aNHwfqlVdzi/IwmYnuDKuXYuCllrgnxZ4fG4yVaux58v9grVsFHdzdjPlAQfp5rkiETYpCMZwgsmdseJ4CoZaosPHLjPumFE/Ua2WAQQljnunsM9TONM9L6KxrO9t5IISD1XtJb0bq1lVI/e72k3mnPd/q77qzhTDmwN4TSNJZN8sxzUJx9HNSMRRoEIHSDLTIJUK+Up8IeCx0B7CiOzG5w/cHyZ3AM5V8lkqBaTDK46AwTkTVGJf59QxUZArG3FEH5vy9HzDmy0tGG+053/x4RqkhqMg5/ClDm+lpZqWwIDAQAB"
+      }
+    ]
+  },
+  {
+    "name": "MBO0002._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 0,
+    "answers": [
+      {
+        "name": "MBO0002._domainkey.roxanna-diercks.de.",
+        "type": 5,
+        "TTL": 3600,
+        "data": "mbo0002._domainkey.mailbox.org."
+      }
+    ]
+  },
+  {
+    "name": "MBO0002._domainkey.roxanna-diercks.de",
+    "type": "TXT",
+    "status": 0,
+    "answers": [
+      {
+        "name": "MBO0002._domainkey.roxanna-diercks.de.",
+        "type": 5,
+        "TTL": 3600,
+        "data": "mbo0002._domainkey.mailbox.org."
+      },
+      {
+        "name": "mbo0002._domainkey.mailbox.org.",
+        "type": 16,
+        "TTL": 300,
+        "data": "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqxEKIg2c48ecfmy/+rj35sBOhdfIYGNDCMeHy0b36DX6MNtS7zA/VDR2q5ubtHzraL5uUGas8kb/33wtrWFYxierLRXy12qj8ItdYCRugu9tXTByEED05WdBtRzJmrb8YBMfeK0E0K3wwoWfhIk/wzKbjMkbqYBOTYLlIcVGQWzOfN7/n3n+VChfu6sGFK3k2qrJNnw22iFy4C8Ks7j77+tCpm0PoUwA2hOdLrRw3ldx2E9PH0GVwIMJRgekY6cS7DrbHrj/AeGlwfwwCSi9T23mYvc79nVrh2+82ZqmkpZSTD2qq+ukOkyjdRuUPck6e2b+x141Nzd81dIZVfOEiwIDAQAB"
+      }
+    ]
+  },
+  {
+    "name": "MBO0003._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 0,
+    "answers": [
+      {
+        "name": "MBO0003._domainkey.roxanna-diercks.de.",
+        "type": 5,
+        "TTL": 3600,
+        "data": "mbo0003._domainkey.mailbox.org."
+      }
+    ]
+  },
+  {
+    "name": "MBO0003._domainkey.roxanna-diercks.de",
+    "type": "TXT",
+    "status": 0,
+    "answers": [
+      {
+        "name": "MBO0003._domainkey.roxanna-diercks.de.",
+        "type": 5,
+        "TTL": 3600,
+        "data": "mbo0003._domainkey.mailbox.org."
+      },
+      {
+        "name": "mbo0003._domainkey.mailbox.org.",
+        "type": 16,
+        "TTL": 3600,
+        "data": "v=DKIM1; k=ed25519; p=k1A30Je8LhsVpcOQrwHOnw0OUj3BP0gXh8nHOgl6t4Y="
+      }
+    ]
+  },
+  {
+    "name": "MBO0004._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 0,
+    "answers": [
+      {
+        "name": "MBO0004._domainkey.roxanna-diercks.de.",
+        "type": 5,
+        "TTL": 3600,
+        "data": "mbo0004._domainkey.mailbox.org."
+      }
+    ]
+  },
+  {
+    "name": "MBO0004._domainkey.roxanna-diercks.de",
+    "type": "TXT",
+    "status": 0,
+    "answers": [
+      {
+        "name": "MBO0004._domainkey.roxanna-diercks.de.",
+        "type": 5,
+        "TTL": 3600,
+        "data": "mbo0004._domainkey.mailbox.org."
+      },
+      {
+        "name": "mbo0004._domainkey.mailbox.org.",
+        "type": 16,
+        "TTL": 3600,
+        "data": "v=DKIM1; k=ed25519; p=mLyBxtALVny3i4fn1fgHiXWWzk4XtNbmq4Jcmfkd8p8="
+      }
+    ]
+  },
+  {
+    "name": "uberspace._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 0,
+    "answers": []
+  },
+  {
+    "name": "uberspace._domainkey.roxanna-diercks.de",
+    "type": "TXT",
+    "status": 0,
+    "answers": [
+      {
+        "name": "uberspace._domainkey.roxanna-diercks.de.",
+        "type": 16,
+        "TTL": 3600,
+        "data": "v=DKIM1;t=s;n=core;p=MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA69mhjXzJW/I2wioMJGWAiTFKWoK4wr2dTcT+a0sxEpJObwdKFGEuaqKslT9cj/ev2ywDfNsoMvxmn8O1vT0qD9DszfkU3ijFo+734qflcV37pwuBunoAiVj4+Qub6GeNsMsGZNBi+ayql216Erui0oSDl2txujyW84gPdEEQDPUOYzq9yBWmmx72dxBQg1Jv6udtfOfKUB9bVaBKma9bhUolnsrwu5Xq5+123p2yStBriuiHA/aurhwhK6ih0Xh3nPQycMRuw421ChZErq820rbsUeeTLTpW6qjjEY0m3SjKpc2FMhLWmrBWt/d1dcJE7taxXAsl5GL0AAbh8E0x8ux/ioN4z0J+HNGY75QKqqI9+a85xPgYJ3WjfarPSGNEJa+zwd09tFQhucNLXEHQ8wRZMo4QQ4VJmRkHsUkJMT+8qZ9U5onPoVKoeVfB9o5Hano62Nilm8G1oVTRq8xmF7KHEa9OE1Neb6XG1k703ClfuVU5FEO0NLlYlAPC3KYwRA5exErUMeSb2QrNR3lhMUI/2Kvdtdm9UQjtby7HL1xsBJ72YRE5YHXRbkarwkGgL3ZX+HntvZ8LXYs+jDOyjhynrikjBuZz78WPmJ2nZ7+75kadHX+70SwyijtxhktSCBqBgumr0U+bIkfZNPy94yeeHZ7g+HM5b41QP9Ek15MCAwEAAQ=="
+      }
+    ]
+  },
+  {
+    "name": "mailbox._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 3,
+    "answers": []
+  },
+  {
+    "name": "mailbox._domainkey.roxanna-diercks.de",
+    "type": "TXT",
+    "status": 3,
+    "answers": []
+  },
+  {
+    "name": "google._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 3,
+    "answers": []
+  },
+  {
+    "name": "google._domainkey.roxanna-diercks.de",
+    "type": "TXT",
+    "status": 3,
+    "answers": []
+  },
+  {
+    "name": "_domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 0,
+    "answers": []
+  },
+  {
+    "name": "_domainkey.roxanna-diercks.de",
+    "type": "TXT",
+    "status": 0,
+    "answers": []
+  },
+  {
+    "name": "_autodiscover._tcp.roxanna-diercks.de",
+    "type": "SRV",
+    "status": 0,
+    "answers": []
+  },
+  {
+    "name": "_submission._tcp.roxanna-diercks.de",
+    "type": "SRV",
+    "status": 0,
+    "answers": []
+  },
+  {
+    "name": "_imaps._tcp.roxanna-diercks.de",
+    "type": "SRV",
+    "status": 0,
+    "answers": []
+  },
+  {
+    "name": "_pop3s._tcp.roxanna-diercks.de",
+    "type": "SRV",
+    "status": 0,
+    "answers": []
+  },
+  {
+    "name": "_caldavs._tcp.roxanna-diercks.de",
+    "type": "SRV",
+    "status": 0,
+    "answers": []
+  },
+  {
+    "name": "_carddavs._tcp.roxanna-diercks.de",
+    "type": "SRV",
+    "status": 0,
+    "answers": []
+  },
+  {
+    "name": "*.roxanna-diercks.de",
+    "type": "A",
+    "status": 0,
+    "answers": [
+      {
+        "name": "*.roxanna-diercks.de.",
+        "type": 1,
+        "TTL": 3600,
+        "data": "45.87.158.7"
+      }
+    ]
+  },
+  {
+    "name": "*.roxanna-diercks.de",
+    "type": "AAAA",
+    "status": 0,
+    "answers": []
+  },
+  {
+    "name": "_vercel.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 0,
+    "answers": []
+  },
+  {
+    "name": "_vercel.roxanna-diercks.de",
+    "type": "TXT",
+    "status": 0,
+    "answers": []
+  }
+]

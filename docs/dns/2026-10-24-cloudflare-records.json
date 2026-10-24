@@ -1,0 +1,173 @@
+[
+  {
+    "name": "*.roxanna-diercks.de",
+    "type": "A",
+    "content": "45.87.158.7",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Cloudflare scan; manually preserved"
+  },
+  {
+    "name": "_dmarc.roxanna-diercks.de",
+    "type": "TXT",
+    "content": "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Cloudflare scan; manually preserved"
+  },
+  {
+    "name": "brevo1._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "content": "b1.roxanna-diercks-de.dkim.brevo.com",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Cloudflare scan; manually preserved"
+  },
+  {
+    "name": "brevo2._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "content": "b2.roxanna-diercks-de.dkim.brevo.com",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Cloudflare scan; manually preserved"
+  },
+  {
+    "name": "mbo0001._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "content": "mbo0001._domainkey.mailbox.org",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Additional DNS lookup; manually preserved"
+  },
+  {
+    "name": "mbo0002._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "content": "mbo0002._domainkey.mailbox.org",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Additional DNS lookup; manually preserved"
+  },
+  {
+    "name": "mbo0003._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "content": "mbo0003._domainkey.mailbox.org",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Additional DNS lookup; manually preserved"
+  },
+  {
+    "name": "mbo0004._domainkey.roxanna-diercks.de",
+    "type": "CNAME",
+    "content": "mbo0004._domainkey.mailbox.org",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Additional DNS lookup; manually preserved"
+  },
+  {
+    "name": "roxanna-diercks.de",
+    "type": "AAAA",
+    "content": "100::",
+    "priority": "",
+    "ttl": 1,
+    "proxied": true,
+    "source": "Cloudflare Worker Custom Domain"
+  },
+  {
+    "name": "roxanna-diercks.de",
+    "type": "MX",
+    "content": "mxext1.mailbox.org",
+    "priority": 10,
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Cloudflare scan; manually preserved"
+  },
+  {
+    "name": "roxanna-diercks.de",
+    "type": "MX",
+    "content": "mxext2.mailbox.org",
+    "priority": 10,
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Cloudflare scan; manually preserved"
+  },
+  {
+    "name": "roxanna-diercks.de",
+    "type": "MX",
+    "content": "mxext3.mailbox.org",
+    "priority": 10,
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Cloudflare scan; manually preserved"
+  },
+  {
+    "name": "roxanna-diercks.de",
+    "type": "MX",
+    "content": "mxext4.mailbox.org",
+    "priority": 10,
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Cloudflare scan; manually preserved"
+  },
+  {
+    "name": "roxanna-diercks.de",
+    "type": "TXT",
+    "content": "brevo-code:abcd82084610ccf4c8ba1143732ad8cf",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Cloudflare scan; manually preserved"
+  },
+  {
+    "name": "roxanna-diercks.de",
+    "type": "TXT",
+    "content": "forward-email=fridolin.diercks@gmail.com",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Cloudflare scan; manually preserved"
+  },
+  {
+    "name": "roxanna-diercks.de",
+    "type": "TXT",
+    "content": "google-site-verification=cXYf9nKBXWRM3aii8afYsRoQHZRmJekG_Sr8YzRUd-E",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Cloudflare scan; manually preserved"
+  },
+  {
+    "name": "roxanna-diercks.de",
+    "type": "TXT",
+    "content": "v=spf1 include:spf.uberspace.de include:spf.brevo.com include:mailbox.org ~all",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Cloudflare scan; manually preserved"
+  },
+  {
+    "name": "uberspace._domainkey.roxanna-diercks.de",
+    "type": "TXT",
+    "content": "v=DKIM1;t=s;n=core;p=MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA69mhjXzJW/I2wioMJGWAiTFKWoK4wr2dTcT+a0sxEpJObwdKFGEuaqKslT9cj/ev2ywDfNsoMvxmn8O1vT0qD9DszfkU3ijFo+734qflcV37pwuBunoAiVj4+Qub6GeNsMsGZNBi+ayql216Erui0oSDl2txujyW84gPdEEQDPUOYzq9yBWmmx72dxBQg1Jv6udtfOfKUB9bVaBKma9bhUolnsrwu5Xq5+123p2yStBriuiHA/aurhwhK6ih0Xh3nPQycMRuw421ChZErq820rbsUeeTLTpW6qjjEY0m3SjKpc2FMhLWmrBWt/d1dcJE7taxXAsl5GL0AAbh8E0x8ux/ioN4z0J+HNGY75QKqqI9+a85xPgYJ3WjfarPSGNEJa+zwd09tFQhucNLXEHQ8wRZMo4QQ4VJmRkHsUkJMT+8qZ9U5onPoVKoeVfB9o5Hano62Nilm8G1oVTRq8xmF7KHEa9OE1Neb6XG1k703ClfuVU5FEO0NLlYlAPC3KYwRA5exErUMeSb2QrNR3lhMUI/2Kvdtdm9UQjtby7HL1xsBJ72YRE5YHXRbkarwkGgL3ZX+HntvZ8LXYs+jDOyjhynrikjBuZz78WPmJ2nZ7+75kadHX+70SwyijtxhktSCBqBgumr0U+bIkfZNPy94yeeHZ7g+HM5b41QP9Ek15MCAwEAAQ==",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Additional DNS lookup; manually preserved"
+  },
+  {
+    "name": "www.roxanna-diercks.de",
+    "type": "AAAA",
+    "content": "100::",
+    "priority": "",
+    "ttl": 1,
+    "proxied": true,
+    "source": "Cloudflare Worker Custom Domain"
+  }
+]
