@@ -2,10 +2,14 @@ name,type,content,priority,ttl,proxied,source
 _dmarc.roxanna-diercks.de,TXT,v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com,,3600,False,Cloudflare scan; manually preserved
 brevo1._domainkey.roxanna-diercks.de,CNAME,b1.roxanna-diercks-de.dkim.brevo.com,,3600,False,Cloudflare scan; manually preserved
 brevo2._domainkey.roxanna-diercks.de,CNAME,b2.roxanna-diercks-de.dkim.brevo.com,,3600,False,Cloudflare scan; manually preserved
+cfdc7c55c1521b91fb1400f957bbf5591e7e9c67.roxanna-diercks.de,TXT,afde44eef14eeb038ac1f94a6377a70f8916a22e,,3600,False,User identified; verified public DNS
 mbo0001._domainkey.roxanna-diercks.de,CNAME,mbo0001._domainkey.mailbox.org,,3600,False,Additional DNS lookup; manually preserved
 mbo0002._domainkey.roxanna-diercks.de,CNAME,mbo0002._domainkey.mailbox.org,,3600,False,Additional DNS lookup; manually preserved
 mbo0003._domainkey.roxanna-diercks.de,CNAME,mbo0003._domainkey.mailbox.org,,3600,False,Additional DNS lookup; manually preserved
 mbo0004._domainkey.roxanna-diercks.de,CNAME,mbo0004._domainkey.mailbox.org,,3600,False,Additional DNS lookup; manually preserved
+recetas.roxanna-diercks.de,CNAME,41c38340d769004d.vercel-dns-017.com,,3600,False,Additional DNS lookup; Vercel DNS only
+recipes.roxanna-diercks.de,CNAME,41c38340d769004d.vercel-dns-017.com,,3600,False,Additional DNS lookup; Vercel DNS only
+rezepte.roxanna-diercks.de,CNAME,41c38340d769004d.vercel-dns-017.com,,3600,False,Additional DNS lookup; Vercel DNS only
 roxanna-diercks.de,AAAA,100::,,1,True,Cloudflare Worker Custom Domain
 roxanna-diercks.de,MX,mxext1.mailbox.org,10,3600,False,Cloudflare scan; manually preserved
 roxanna-diercks.de,MX,mxext2.mailbox.org,10,3600,False,Cloudflare scan; manually preserved

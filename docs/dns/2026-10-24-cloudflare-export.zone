@@ -1,6 +1,6 @@
 ;;
 ;; Domain:     roxanna-diercks.de.
-;; Exported:   2026-10-24 15:18:33
+;; Exported:   2026-10-24 15:22:34
 ;;
 ;; This file is intended for use for informational and archival
 ;; purposes ONLY and MUST be edited before use on a production
@@ -24,7 +24,7 @@
 ;;
 ;; Use at your own risk.
 ;; SOA Record
-roxanna-diercks.de	3600	IN	SOA	dane.ns.cloudflare.com. dns.cloudflare.com. 2054452171 10000 2400 604800 3600
+roxanna-diercks.de	3600	IN	SOA	dane.ns.cloudflare.com. dns.cloudflare.com. 2054452195 10000 2400 604800 3600
 
 ;; NS Records
 roxanna-diercks.de.	86400	IN	NS	dane.ns.cloudflare.com.
@@ -37,6 +37,9 @@ mbo0001._domainkey.roxanna-diercks.de.	3600	IN	CNAME	mbo0001._domainkey.mailbox.
 mbo0002._domainkey.roxanna-diercks.de.	3600	IN	CNAME	mbo0002._domainkey.mailbox.org. ; Preserved from INWX DNS; additional public DNS lookup (2026-10-24) cf_tags=cf-proxied:false
 mbo0003._domainkey.roxanna-diercks.de.	3600	IN	CNAME	mbo0003._domainkey.mailbox.org. ; Preserved from INWX DNS; additional public DNS lookup (2026-10-24) cf_tags=cf-proxied:false
 mbo0004._domainkey.roxanna-diercks.de.	3600	IN	CNAME	mbo0004._domainkey.mailbox.org. ; Preserved from INWX DNS; additional public DNS lookup (2026-10-24) cf_tags=cf-proxied:false
+recetas.roxanna-diercks.de.	3600	IN	CNAME	41c38340d769004d.vercel-dns-017.com. ; Preserve existing Vercel recipe site; DNS only per user policy (2026-10-24) cf_tags=cf-proxied:false
+recipes.roxanna-diercks.de.	3600	IN	CNAME	41c38340d769004d.vercel-dns-017.com. ; Preserve existing Vercel recipe site; DNS only per user policy (2026-10-24) cf_tags=cf-proxied:false
+rezepte.roxanna-diercks.de.	3600	IN	CNAME	41c38340d769004d.vercel-dns-017.com. ; Preserve existing Vercel recipe site; DNS only per user policy (2026-10-24) cf_tags=cf-proxied:false
 
 ;; MX Records
 roxanna-diercks.de.	3600	IN	MX	10 mxext4.mailbox.org. ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24)
@@ -45,6 +48,7 @@ roxanna-diercks.de.	3600	IN	MX	10 mxext2.mailbox.org. ; Preserved from INWX DNS;
 roxanna-diercks.de.	3600	IN	MX	10 mxext1.mailbox.org. ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24)
 
 ;; TXT Records
+cfdc7c55c1521b91fb1400f957bbf5591e7e9c67.roxanna-diercks.de.	3600	IN	TXT	"afde44eef14eeb038ac1f94a6377a70f8916a22e" ; Existing domain verification record identified by user; preserved from INWX DNS (2026-10-24)
 _dmarc.roxanna-diercks.de.	3600	IN	TXT	"v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com" ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24)
 roxanna-diercks.de.	3600	IN	TXT	"v=spf1 include:spf.uberspace.de include:spf.brevo.com include:mailbox.org ~all" ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24)
 roxanna-diercks.de.	3600	IN	TXT	"google-site-verification=cXYf9nKBXWRM3aii8afYsRoQHZRmJekG_Sr8YzRUd-E" ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24)

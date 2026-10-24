@@ -27,6 +27,15 @@
     "source": "Cloudflare scan; manually preserved"
   },
   {
+    "name": "cfdc7c55c1521b91fb1400f957bbf5591e7e9c67.roxanna-diercks.de",
+    "type": "TXT",
+    "content": "afde44eef14eeb038ac1f94a6377a70f8916a22e",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "User identified; verified public DNS"
+  },
+  {
     "name": "mbo0001._domainkey.roxanna-diercks.de",
     "type": "CNAME",
     "content": "mbo0001._domainkey.mailbox.org",
@@ -61,6 +70,33 @@
     "ttl": 3600,
     "proxied": false,
     "source": "Additional DNS lookup; manually preserved"
+  },
+  {
+    "name": "recetas.roxanna-diercks.de",
+    "type": "CNAME",
+    "content": "41c38340d769004d.vercel-dns-017.com",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Additional DNS lookup; Vercel DNS only"
+  },
+  {
+    "name": "recipes.roxanna-diercks.de",
+    "type": "CNAME",
+    "content": "41c38340d769004d.vercel-dns-017.com",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Additional DNS lookup; Vercel DNS only"
+  },
+  {
+    "name": "rezepte.roxanna-diercks.de",
+    "type": "CNAME",
+    "content": "41c38340d769004d.vercel-dns-017.com",
+    "priority": "",
+    "ttl": 3600,
+    "proxied": false,
+    "source": "Additional DNS lookup; Vercel DNS only"
   },
   {
     "name": "roxanna-diercks.de",

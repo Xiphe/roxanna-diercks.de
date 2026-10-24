@@ -641,5 +641,57 @@
     "type": "TXT",
     "status": 0,
     "answers": []
+  },
+  {
+    "name": "rezepte.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 0,
+    "answers": [
+      {
+        "name": "rezepte.roxanna-diercks.de.",
+        "type": 5,
+        "TTL": 3600,
+        "data": "41c38340d769004d.vercel-dns-017.com."
+      }
+    ]
+  },
+  {
+    "name": "recipes.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 0,
+    "answers": [
+      {
+        "name": "recipes.roxanna-diercks.de.",
+        "type": 5,
+        "TTL": 3600,
+        "data": "41c38340d769004d.vercel-dns-017.com."
+      }
+    ]
+  },
+  {
+    "name": "recetas.roxanna-diercks.de",
+    "type": "CNAME",
+    "status": 0,
+    "answers": [
+      {
+        "name": "recetas.roxanna-diercks.de.",
+        "type": 5,
+        "TTL": 3600,
+        "data": "41c38340d769004d.vercel-dns-017.com."
+      }
+    ]
+  },
+  {
+    "name": "cfdc7c55c1521b91fb1400f957bbf5591e7e9c67.roxanna-diercks.de",
+    "type": "TXT",
+    "status": 0,
+    "answers": [
+      {
+        "name": "cfdc7c55c1521b91fb1400f957bbf5591e7e9c67.roxanna-diercks.de.",
+        "type": 16,
+        "TTL": 3600,
+        "data": "afde44eef14eeb038ac1f94a6377a70f8916a22e"
+      }
+    ]
   }
 ]

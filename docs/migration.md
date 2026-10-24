@@ -11,3 +11,5 @@ The user explicitly chose to keep both publicly reachable About pages despite th
 Keep the five Brevo forms with their existing list/template and block IDs so confirmation links already sent continue to work. Correct the pet-group button to the signup on its own page, locale filtering in blog previews, ignored name fields, duplicate anchors, and the inverted search-indexing flags. Update the privacy page's hosting information from Vercel to Cloudflare; preserve other editorial content for review.
 
 Use GitHub Issues for staged acceptance and direct commits to `main`. Review a deployed preview before switching production DNS. Existing hosting and the source database remain available for rollback.
+
+Cloudflare proxying is reserved for Cloudflare-hosted services. External services must use DNS only, including the existing Vercel recipe sites at `rezepte`, `recipes`, and `recetas`.
