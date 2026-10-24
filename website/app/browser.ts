@@ -12,6 +12,54 @@ const app = run({
 
 app.addEventListener('error', (event) => console.error(event.error))
 
+function updateCurrentNavigation() {
+  for (const link of document.querySelectorAll<HTMLAnchorElement>(
+    '.site-header .top-nav-links a, .site-header .top-nav-contact',
+  )) {
+    const target = new URL(link.href)
+    const isCurrent =
+      target.origin === location.origin &&
+      target.pathname === location.pathname &&
+      (!target.hash || target.hash === location.hash)
+    if (isCurrent) link.setAttribute('aria-current', target.hash ? 'location' : 'page')
+    else link.removeAttribute('aria-current')
+  }
+  for (const group of document.querySelectorAll('.top-nav-group')) {
+    group
+      .querySelector('summary')
+      ?.toggleAttribute('data-current', !!group.querySelector('a[aria-current]'))
+  }
+}
+updateCurrentNavigation()
+window.addEventListener('hashchange', updateCurrentNavigation)
+window.addEventListener('pageshow', updateCurrentNavigation)
+// Remix can replace the header during client navigation without firing hashchange or pageshow.
+window.navigation?.addEventListener('navigatesuccess', updateCurrentNavigation)
+
+const navigationMenus = document.querySelectorAll<HTMLDetailsElement>('.site-header details')
+for (const menu of navigationMenus) {
+  const closeMenu = () => {
+    menu.open = false
+    for (const child of menu.querySelectorAll<HTMLDetailsElement>('details')) child.open = false
+  }
+  menu.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape' || !menu.open) return
+    event.stopPropagation()
+    closeMenu()
+    menu.querySelector('summary')?.focus()
+  })
+  menu.addEventListener('click', (event) => {
+    if ((event.target as Element).closest('a')) closeMenu()
+  })
+  document.addEventListener('click', (event) => {
+    if (!menu.contains(event.target as Node)) closeMenu()
+  })
+  document.addEventListener('focusin', (event) => {
+    if (!menu.contains(event.target as Node)) closeMenu()
+  })
+  matchMedia('(min-width: 64rem)').addEventListener('change', closeMenu)
+}
+
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)')
 if (!reducedMotion.matches) {
   const animations = new Map<HTMLElement, Animation>()

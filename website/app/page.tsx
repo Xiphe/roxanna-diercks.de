@@ -2,6 +2,7 @@ import type { Handle, RemixNode } from 'remix/component'
 import assets from '../../.generated/assets.json' with { type: 'json' }
 import { SiteContent } from './ui-library/context.ts'
 import { colorStyle } from './ui-library/presentation.tsx'
+import { alternateLanguageHref, TopNavigation } from './navigation.tsx'
 
 export function Page(handle: Handle<{ title: string; body: RemixNode; noindex?: boolean }>) {
   const { site, route, path } = handle.context.get(SiteContent)
@@ -111,6 +112,7 @@ export function Page(handle: Handle<{ title: string; body: RemixNode; noindex?: 
           >
             {locale === 'de' ? 'Zum Inhalt' : 'Skip to content'}
           </a>
+          <TopNavigation />
           <div class="site-wrapper">
             <main id="content">{p.body}</main>
             <nav
@@ -121,7 +123,15 @@ export function Page(handle: Handle<{ title: string; body: RemixNode; noindex?: 
               <ul>
                 {site.navigation[locale].map((link) => (
                   <li>
-                    <a href={link.href}>{link.title}</a>
+                    <a
+                      href={
+                        link.href === (locale === 'de' ? '/en' : '/')
+                          ? alternateLanguageHref(path, locale)
+                          : link.href
+                      }
+                    >
+                      {link.title}
+                    </a>
                   </li>
                 ))}
                 <li>©{new Date().getUTCFullYear()} Roxanna Diercks</li>

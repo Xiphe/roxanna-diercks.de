@@ -8,6 +8,7 @@ import {
   Buttons,
   ContactLinks,
   Signup,
+  Blog,
 } from '@roxanna/content-components'
 
 export const title = 'Willkommen'
@@ -313,6 +314,13 @@ export default (
             als monatlichen Newsletter für deutschsprachige Menschen weltweit.
           </p>
         </Prose>
+        <Blog
+          limit={3}
+          sort={'newest'}
+          align={'left'}
+          top={false}
+          bottom={true}
+        />
       </Column>
     </Columns>
     <Prose

@@ -1,5 +1,60 @@
 import { expect, test, type Page } from '@playwright/test'
 
+// Exercise Remix client navigation, which requires Navigation API sourceElement support.
+test.use({ launchOptions: { args: ['--enable-experimental-web-platform-features'] } })
+
+test.describe('navigation after page changes', () => {
+  for (const home of ['/', '/en']) {
+    for (const mobile of [false, true]) {
+      test(`${home} anchor highlights without a manual reload on ${mobile ? 'mobile' : 'desktop'}`, async ({
+        page,
+      }) => {
+        await page.setViewportSize({ width: mobile ? 390 : 1280, height: 900 })
+        await page.goto(home === '/' ? '/en' : '/')
+        await page.evaluate(async () => {
+          await import(document.querySelector<HTMLScriptElement>('script[type="module"][src]')!.src)
+        })
+        expect(await page.evaluate(() => 'sourceElement' in NavigateEvent.prototype)).toBe(true)
+        const nav = page.locator(mobile ? '.top-nav-mobile' : '.top-nav-desktop')
+        if (mobile) await nav.locator(':scope > summary').click()
+        await nav.locator('.top-nav-language').click()
+        await expect(page).toHaveURL(home === '/' ? /\/$/ : /\/en$/)
+
+        const openGroup = async () => {
+          if (mobile && (await nav.getAttribute('open')) === null)
+            await nav.locator(':scope > summary').click()
+          if ((await nav.locator('.top-nav-group').getAttribute('open')) === null)
+            await nav.locator('.top-nav-group > summary').click()
+        }
+        await openGroup()
+        await nav.locator(`a[href="${home}#pricing"]`).click()
+        await expect(nav.locator(`a[href="${home}#pricing"]`)).toHaveAttribute(
+          'aria-current',
+          'location',
+        )
+        await expect(nav.locator('.top-nav-group > summary')).toHaveAttribute('data-current', '')
+        await openGroup()
+        await nav.locator(`a[href="${home}#faq"]`).click()
+        await expect(nav.locator(`a[href="${home}#faq"]`)).toHaveAttribute(
+          'aria-current',
+          'location',
+        )
+        await expect(nav.locator(`a[href="${home}#pricing"]`)).not.toHaveAttribute('aria-current')
+        await page.goBack()
+        await expect(nav.locator(`a[href="${home}#pricing"]`)).toHaveAttribute(
+          'aria-current',
+          'location',
+        )
+        await page.goForward()
+        await expect(nav.locator(`a[href="${home}#faq"]`)).toHaveAttribute(
+          'aria-current',
+          'location',
+        )
+      })
+    }
+  }
+})
+
 test('public HTML renders without JavaScript and unknown URLs return 404', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false })
   const page = await context.newPage()

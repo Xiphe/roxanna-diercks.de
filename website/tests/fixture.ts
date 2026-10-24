@@ -46,6 +46,15 @@ const site: SiteMetadata = {
     },
   },
   routes: [
+    ...(['/', '/en'] as const).map((path) => ({
+      path,
+      document: 'home',
+      locale: path === '/' ? ('de' as const) : ('en' as const),
+      title: 'Navigation fixture',
+      kind: 'page' as const,
+      createdAt: '2026-01-01',
+      updatedAt: '2026-01-01',
+    })),
     {
       path: '/fixture',
       document: 'fixture',
@@ -83,6 +92,21 @@ const site: SiteMetadata = {
 }
 export const documents: PublishedDocuments = {
   fixture: page,
+  home: {
+    ...structuredClone(page),
+    content: {
+      title: 'Navigation fixture',
+      default: {
+        type: 'fragment',
+        children: ['Trauerbegleitung', 'pricing', 'faq', 'blog', 'contact'].map((id) => ({
+          type: 'element',
+          tag: 'section',
+          props: { id },
+          children: [id],
+        })),
+      },
+    },
+  },
   '404': { ...structuredClone(page), content: { title: 'Not found', default: 'Not found' } },
   _site: {
     $schema: CMX_DOCUMENT_SCHEMA,
