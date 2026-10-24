@@ -12,7 +12,10 @@
   "star_orange.svg": { "type": "image/svg+xml", "alt": {}, "width": 215, "height": 215 },
   "IMG_6397.JPG": {
     "type": "image/jpeg",
-    "alt": { "en": "Frau mit Mütze und gelbem Regenmantel blickt auf das Meer." },
+    "alt": {
+      "en": "Frau mit Mütze und gelbem Regenmantel blickt auf das Meer.",
+      "de": "Frau mit Mütze und gelbem Regenmantel blickt auf das Meer."
+    },
     "width": 3213,
     "height": 5129,
     "credit": "© Julia Federkiel",
@@ -64,7 +67,7 @@
   },
   "waves.png": {
     "type": "image/png",
-    "alt": { "en": "Waves on sand" },
+    "alt": { "en": "Waves on sand", "de": "Wellen am Sandstrand" },
     "width": 3004,
     "height": 1690,
     "focalX": 50,
@@ -72,7 +75,10 @@
   },
   "Roxy-mit-Zitrone.jpeg": {
     "type": "image/jpeg",
-    "alt": { "en": "Roxanna spaziert mit einer Zitrone in der Hand" },
+    "alt": {
+      "en": "Roxanna spaziert mit einer Zitrone in der Hand",
+      "de": "Roxanna spaziert mit einer Zitrone in der Hand"
+    },
     "width": 3640,
     "height": 4987,
     "credit": "©  Chris Zielecki",

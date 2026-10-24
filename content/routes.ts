@@ -105,12 +105,14 @@ export const routes = [
     locale: 'de',
     title: 'Über mich',
     kind: 'page',
-    description: 'This is an about me page of Roxanna — a grief companion and traveller.',
-    metaTitle: 'About',
+    description:
+      'Lerne Roxanna kennen – Trauerbegleiterin und Reisende. Über ihren Weg und ihre Arbeit online und in Tarifa.',
+    metaTitle: 'Über mich',
     createdAt: '2026-01-02T15:44:03.126+00:00',
-    updatedAt: '2026-01-25T14:37:53.375+00:00',
+    updatedAt: '2026-10-24T00:00:00.000+00:00',
     noindex: false,
-    summary: 'This is an about me page of Roxanna — a grief companion and traveller.',
+    summary:
+      'Lerne Roxanna kennen – Trauerbegleiterin und Reisende. Über ihren Weg und ihre Arbeit online und in Tarifa.',
     hasContent: true,
   },
   {

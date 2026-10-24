@@ -8,11 +8,11 @@ export default (
       top={true}
       bottom={true}
     >
-      <h1>You are resilient. </h1>
-      <h1>And sometimes, even resilience needs company.</h1>
+      <h1>Du bist widerstandsfähig.</h1>
+      <h1>Und manchmal braucht auch deine Widerstandskraft Begleitung.</h1>
       <p>
-        I accompany people through loss, change, and transition — with online grief companionship
-        and sessions in Tarifa. Grounded, human, and at your pace.
+        Ich begleite Menschen durch Verlust, Veränderung und Übergänge – mit Trauerbegleitung online
+        und vor Ort in Tarifa. Bodenständig, menschlich und in deinem Tempo.
       </p>
     </Prose>
     <Columns
@@ -31,19 +31,20 @@ export default (
           bottom={true}
         >
           <h2>
-            <strong>✨ Mission</strong>
+            <strong>✨ Was mir wichtig ist</strong>
           </h2>
           <p>
-            I believe that grief deserves space — not silence.
-            <br /> That we can move and still stay connected to what matters.
-            <br /> And that being met with presence and honesty can change how we carry what we’ve
-            lost.
+            Ich glaube, dass Trauer Raum verdient – statt Schweigen.
+            <br /> Dass wir unterwegs sein und trotzdem mit dem verbunden bleiben können, was uns
+            wichtig ist.
+            <br /> Und dass es unseren Umgang mit Verlust verändern kann, wenn uns jemand aufmerksam
+            und ehrlich begegnet.
           </p>
           <p>
-            My work is about creating those spaces — steady, clear, and human — where grief can
-            exist naturally, without shame or rush.
-            <br /> For travellers, vanlifers, and anyone living between places, I offer
-            companionship through loss and change — online and by the sea in Tarifa.
+            In meiner Arbeit schaffe ich solche Räume: verlässlich, klar und menschlich. Hier darf
+            Trauer selbstverständlich da sein, ohne Scham und ohne Eile.
+            <br /> Ich begleite Reisende, Vanlifer und Menschen, die zwischen Orten leben, durch
+            Verlust und Veränderung – online und am Meer in Tarifa.
           </p>
         </Prose>
       </Column>
@@ -91,24 +92,25 @@ export default (
           bottom={true}
         >
           <h3>
-            <strong>About Me</strong>
+            <strong>Über mich</strong>
           </h3>
           <p>
-            I’m Roxanna — a grief companion and traveller.
+            Ich bin Roxanna – Trauerbegleiterin und Reisende.
             <br />
-            Born in 1988, usually somewhere between Hamburg and my buttermilk-yellow van in Spain.
+            Jahrgang 1988, meistens irgendwo zwischen Hamburg und meinem buttermilchgelben Van in
+            Spanien.
           </p>
           <p>
-            Before becoming a grief companion, I worked for many years in marketing and event
-            management.
-            <br />I designed experiences, gatherings, and moments that connected people and stayed
-            with them — a little like <em>magic.</em>
+            Bevor ich Trauerbegleiterin wurde, habe ich viele Jahre im Marketing und Eventmanagement
+            gearbeitet.
+            <br /> Ich habe Erlebnisse, Begegnungen und Momente gestaltet, die Menschen verbunden
+            haben und in Erinnerung geblieben sind – ein bisschen wie <em>Magie.</em>
           </p>
           <p>
-            Today, I still work with presence and atmosphere — only now the spaces are quieter. More
-            focused.
+            Auch heute geht es in meiner Arbeit um Präsenz und Atmosphäre. Die Räume sind nur
+            stiller geworden. Konzentrierter.
             <br />
-            Spaces that hold what words sometimes can’t.
+            Räume, in denen auch das Platz hat, wofür manchmal die Worte fehlen.
           </p>
         </Prose>
       </Column>
@@ -128,25 +130,27 @@ export default (
           bottom={true}
         >
           <p>
-            A personal loss showed me how differently grief can unfold — even within one family.
+            Ein eigener Verlust hat mir gezeigt, wie unterschiedlich Trauer verlaufen kann – sogar
+            innerhalb einer Familie.
             <br />
-            There is no universal way to grieve. No correct rhythm.
+            Es gibt keinen allgemeingültigen Weg zu trauern. Keinen richtigen Rhythmus.
           </p>
           <p>
-            Writing became my entry point.
-            <br />A way to stay with what had no words yet.
+            Das Schreiben wurde mein Zugang.
+            <br /> Eine Möglichkeit, bei dem zu bleiben, wofür ich noch keine Worte hatte.
           </p>
           <p>
-            Through this process, I learned that grief is not something to overcome.
+            Dabei habe ich gelernt, dass Trauer nichts ist, was ich überwinden muss.
             <br />
-            It is something to walk alongside.
+            Ich kann lernen, mit ihr zu gehen.
           </p>
           <p>
-            When I began my professional training in <strong>grief accompaniment</strong> with
-            Vergiss mein Nie, it felt deeply aligned.
+            Als ich meine Ausbildung zur <strong>Trauerbegleiterin</strong> bei Vergiss mein Nie
+            begann, fühlte sich das sehr stimmig an.
             <br />
-            This work gave language to what I had already experienced: that presence, creativity,
-            and gentle attention can support resilience when it feels depleted.
+            Diese Arbeit gab dem Worte, was ich selbst schon erlebt hatte: Dass Dasein, Kreativität
+            und behutsame Aufmerksamkeit unsere Widerstandskraft stärken können, wenn sie erschöpft
+            scheint.
           </p>
         </Prose>
       </Column>
@@ -169,7 +173,7 @@ export default (
           top={false}
           bottom={true}
         >
-          <h1>How I found this work</h1>
+          <h1>Wie ich zu dieser Arbeit kam</h1>
         </Prose>
       </Column>
     </Columns>
@@ -189,8 +193,8 @@ export default (
           bottom={true}
         >
           <h1>
-            What grief taught me <br />
-            about resilience
+            Was mich Trauer <br />
+            über Widerstandskraft gelehrt hat
           </h1>
         </Prose>
       </Column>
@@ -204,19 +208,19 @@ export default (
           bottom={true}
         >
           <p>
-            Grief comes in waves — and you can’t outrun them.
+            Trauer kommt in Wellen – und du kannst ihnen nicht davonlaufen.
             <br />
-            But you can learn to surf the big ones and the small ones.
+            Aber du kannst lernen, mit den großen und den kleinen Wellen umzugehen.
           </p>
           <p>
-            Grief is a journey; it needs space, time, and attention.
+            Trauer ist ein Weg. Sie braucht Raum, Zeit und Aufmerksamkeit.
             <br />
-            Then it stops being the problem — and becomes part of the way forward.
+            Dann kann sie aufhören, nur ein Problem zu sein, und Teil deines weiteren Weges werden.
           </p>
           <p>
-            Through my own process, I learned to trust my resilience — to believe that even the
-            hardest moments carry their own rhythm, and that I can meet them with presence instead
-            of fear.
+            Durch meine eigene Trauer habe ich gelernt, meiner Widerstandskraft zu vertrauen. Auch
+            die schwersten Momente haben ihren eigenen Rhythmus. Ich kann lernen, bei ihnen zu
+            bleiben, statt ihnen nur mit Angst zu begegnen.
           </p>
         </Prose>
       </Column>
@@ -236,15 +240,16 @@ export default (
           bottom={true}
         >
           <p>
-            My work combines <strong>grounded grief support</strong> with creative and embodied
-            tools.
+            Meine Arbeit verbindet <strong>bodenständige Trauerbegleitung</strong> mit kreativen und
+            körperorientierten Methoden.
             <br />
-            Sometimes that looks like conversation.
+            Manchmal ist das ein Gespräch.
             <br />
-            Sometimes like silence, movement, or a simple ritual.
-            <br />I work with <strong>Embodiment</strong>, <strong>Emotional Release</strong>, and
-            gentle <strong>creative expression</strong> help to reconnect body and emotion — not to
-            erase grief, but to integrate it.
+            Manchmal Stille, Bewegung oder ein einfaches Ritual.
+            <br /> Ich arbeite mit <strong>Körperwahrnehmung (Embodiment)</strong>,{' '}
+            <strong>emotionalem Ausdruck (Emotional Release)</strong> und behutsamen{' '}
+            <strong>kreativen Ausdrucksformen</strong>. Sie können helfen, Körper und Gefühle wieder
+            miteinander zu verbinden und der Trauer einen Platz im Leben zu geben.
           </p>
         </Prose>
       </Column>
@@ -257,7 +262,7 @@ export default (
           top={true}
           bottom={true}
         >
-          <h1>My approach</h1>
+          <h1>Wie ich arbeite</h1>
         </Prose>
       </Column>
     </Columns>
@@ -291,23 +296,27 @@ export default (
           top={true}
           bottom={true}
         >
-          <h2>Grief companionship for life on the move</h2>
-          <p>I live part of the year in my van, Susy — travelling between Denmark and Spain.</p>
+          <h2>Trauerbegleitung für ein Leben unterwegs</h2>
           <p>
-            Living a <strong>vanlife</strong> has taught me that home is not a fixed place.
-            <br />
-            It is a quality of presence.
+            Einen Teil des Jahres lebe ich in meinem Van Susy und reise zwischen Dänemark und
+            Spanien.
           </p>
           <p>
-            This understanding flows directly into my work as a{' '}
-            <strong>grief companion for travellers and nomads</strong>.<br />
-            Wherever you are — online or by the sea — there can be a place to arrive.
+            Das <strong>Vanlife</strong> hat mich gelehrt, dass Zuhause kein fester Ort sein muss.
+            <br />
+            Es kann auch ein Gefühl des Daseins und Ankommens sein.
           </p>
           <p>
-            When the wind is right, I go kitesurfing.
+            Diese Erfahrung fließt direkt in meine Arbeit als{' '}
+            <strong>Trauerbegleiterin für Reisende und Nomaden</strong> ein.
+            <br /> Wo auch immer du gerade bist – online oder am Meer –, es kann einen Ort zum
+            Ankommen geben.
+          </p>
+          <p>
+            Wenn der Wind passt, gehe ich kitesurfen.
             <br />
-            Movement, balance, rhythm — a reminder that steadiness can exist even while everything
-            moves.
+            Bewegung, Balance, Rhythmus – das erinnert mich daran, dass Halt auch möglich ist, wenn
+            alles in Bewegung ist.
           </p>
         </Prose>
       </Column>
@@ -318,8 +327,9 @@ export default (
       bottom={true}
     >
       <p>
-        If you’d like to know more or work together, you can start with a free <em>Say Hello</em>{' '}
-        call — a short conversation to see if this space feels right for you.
+        Wenn du mehr erfahren möchtest oder dir Begleitung wünschst, können wir uns in einem
+        kostenlosen Gespräch kennenlernen. So kannst du in Ruhe schauen, ob du dich bei mir
+        wohlfühlst.
       </p>
       <p style={{ textAlign: 'center' }}>
         <Button
@@ -327,7 +337,7 @@ export default (
           size={'normal'}
           variant={'secondary'}
         >
-          Say Hello
+          Kennenlernen
         </Button>
       </p>
       <p></p>
@@ -338,12 +348,12 @@ export default (
     >
       <p>
         <Button
-          href={'/de_old'}
+          href={'/'}
           size={'normal'}
           variant={'secondary'}
           icon={'ArrowLeftIcon'}
         >
-          Back to home
+          Zurück zur Startseite
         </Button>
       </p>
     </Prose>
