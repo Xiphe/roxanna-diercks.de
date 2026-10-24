@@ -22,7 +22,7 @@
   },
   "20220629-DSC05058_22-06-30-12-26-14-Jochen-Kilian.jpg": {
     "type": "image/jpeg",
-    "alt": { "de": "roxanna-diercks" },
+    "alt": { "de": "roxanna-diercks", "en": "Roxanna Diercks" },
     "width": 1772,
     "height": 3149,
     "credit": "Jochen Kilian",
@@ -31,7 +31,10 @@
   },
   "PHOTO-2026-07-18-12-00-18 6.jpg": {
     "type": "image/jpeg",
-    "alt": { "en": "closeup of a german shepherd" },
+    "alt": {
+      "en": "closeup of a german shepherd",
+      "de": "Nahaufnahme eines Deutschen Schäferhundes"
+    },
     "width": 2560,
     "height": 1707,
     "credit": "Dominik Hartig",
@@ -55,7 +58,7 @@
   },
   "star_light.svg": {
     "type": "image/svg+xml",
-    "alt": { "en": "Decorative Star" },
+    "alt": { "en": "Decorative Star", "de": "Dekorativer Stern" },
     "width": 215,
     "height": 215
   },
@@ -119,7 +122,10 @@
   },
   "Marcel-und-Erwin.png": {
     "type": "image/png",
-    "alt": { "en": "Man with his german shepherd dog" },
+    "alt": {
+      "en": "Man with his german shepherd dog",
+      "de": "Mann mit seinem Deutschen Schäferhund"
+    },
     "width": 2662,
     "height": 2579,
     "focalX": 50,

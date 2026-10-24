@@ -1,6 +1,14 @@
 import type { SignupConfig } from '../contracts/content.ts'
 
 export const signups = {
+  'pet-loss-de': {
+    id: 'pet-loss-de',
+    path: '/tiertrauer',
+    locale: 'de',
+    listId: 6,
+    templateId: 6,
+    fields: ['name'],
+  },
   '69ea327185c6566c2565f1a4': {
     id: '69ea327185c6566c2565f1a4',
     path: '/en',

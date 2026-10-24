@@ -2,6 +2,40 @@ import type { ContentRoute } from '../contracts/content.ts'
 
 export const routes = [
   {
+    path: '/tiertrauer',
+    document: 'de/tiertrauer',
+    locale: 'de',
+    title: 'Tiertrauerbegleitung für Reisende und Vanlifer',
+    kind: 'page',
+    description:
+      'Online-Trauerbegleitung für Reisende und Vanlifer nach dem Verlust eines Tieres. Einzelbegleitung und Interessentenliste für eine Online-Trauergruppe.',
+    metaTitle: 'Tiertrauerbegleitung für Reisende und Vanlifer | Roxanna Diercks',
+    summary:
+      'Begleitung nach dem Verlust eines tierischen Gefährten. Online, mit Aufmerksamkeit für Menschen, deren Leben unterwegs stattfindet.',
+    image: 'PHOTO-2026-07-18-12-00-18 6.jpg',
+    noindex: false,
+    createdAt: '2026-10-24',
+    updatedAt: '2026-10-24',
+    hasContent: true,
+  },
+  {
+    path: '/en/grief-in-the-workplace',
+    document: 'en/grief-in-the-workplace',
+    locale: 'en',
+    title: 'Grief support in the workplace',
+    kind: 'page',
+    description:
+      'Grief support for organisations: clear structures, workshops, individual conversations and a crisis response plan to support teams and leaders through loss.',
+    metaTitle: 'Grief support in the workplace | Roxanna Diercks',
+    summary:
+      'Helping organisations respond to grief with clear structures, practical workshops and individual support for employees.',
+    image: 'for_those_who_carry_both_freedom_and_loss.png',
+    noindex: false,
+    createdAt: '2026-10-24',
+    updatedAt: '2026-10-24',
+    hasContent: true,
+  },
+  {
     path: '/en',
     document: 'en/home',
     locale: 'en',
