@@ -1,8 +1,8 @@
 {
   "originalUniqueRecords": 28,
   "originalServiceRecords": 24,
-  "expectedPreserved": 21,
-  "cloudflareRecords": 23,
+  "expectedPreserved": 20,
+  "cloudflareRecords": 22,
   "missing": [],
   "changedTTLOrProxy": [],
   "unexpectedExtra": [],
@@ -12,6 +12,12 @@
       "ttl": 3600,
       "type": "A",
       "content": "45.87.158.7"
+    },
+    {
+      "name": "en.roxanna-diercks.de",
+      "ttl": 3600,
+      "type": "CNAME",
+      "content": "41c38340d769004d.vercel-dns-017.com"
     },
     {
       "name": "roxanna-diercks.de",
@@ -28,5 +34,6 @@
   ],
   "managedWorkerRecordsMatch": true,
   "wildcardAbsent": true,
+  "retiredEnAbsent": true,
   "passed": true
 }

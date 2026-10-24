@@ -1,6 +1,6 @@
 ;;
 ;; Domain:     roxanna-diercks.de.
-;; Exported:   2026-10-24 15:26:53
+;; Exported:   2026-10-24 15:30:09
 ;;
 ;; This file is intended for use for informational and archival
 ;; purposes ONLY and MUST be edited before use on a production
@@ -24,7 +24,7 @@
 ;;
 ;; Use at your own risk.
 ;; SOA Record
-roxanna-diercks.de	3600	IN	SOA	dane.ns.cloudflare.com. dns.cloudflare.com. 2054452221 10000 2400 604800 3600
+roxanna-diercks.de	3600	IN	SOA	dane.ns.cloudflare.com. dns.cloudflare.com. 2054452240 10000 2400 604800 3600
 
 ;; NS Records
 roxanna-diercks.de.	86400	IN	NS	dane.ns.cloudflare.com.
@@ -33,7 +33,6 @@ roxanna-diercks.de.	86400	IN	NS	lady.ns.cloudflare.com.
 ;; CNAME Records
 brevo1._domainkey.roxanna-diercks.de.	3600	IN	CNAME	b1.roxanna-diercks-de.dkim.brevo.com. ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24) cf_tags=cf-proxied:false
 brevo2._domainkey.roxanna-diercks.de.	3600	IN	CNAME	b2.roxanna-diercks-de.dkim.brevo.com. ; Preserved from INWX DNS; found by Cloudflare scan (2026-10-24) cf_tags=cf-proxied:false
-en.roxanna-diercks.de.	3600	IN	CNAME	41c38340d769004d.vercel-dns-017.com. ; Preserved from complete INWX AXFR; external Vercel service remains DNS only (2026-10-24) cf_tags=cf-proxied:false
 mbo0001._domainkey.roxanna-diercks.de.	3600	IN	CNAME	mbo0001._domainkey.mailbox.org. ; Preserved from INWX DNS; additional public DNS lookup (2026-10-24) cf_tags=cf-proxied:false
 mbo0002._domainkey.roxanna-diercks.de.	3600	IN	CNAME	mbo0002._domainkey.mailbox.org. ; Preserved from INWX DNS; additional public DNS lookup (2026-10-24) cf_tags=cf-proxied:false
 mbo0003._domainkey.roxanna-diercks.de.	3600	IN	CNAME	mbo0003._domainkey.mailbox.org. ; Preserved from INWX DNS; additional public DNS lookup (2026-10-24) cf_tags=cf-proxied:false

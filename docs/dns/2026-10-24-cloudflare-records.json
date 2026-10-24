@@ -36,15 +36,6 @@
     "source": "User identified; verified public DNS"
   },
   {
-    "name": "en.roxanna-diercks.de",
-    "type": "CNAME",
-    "content": "41c38340d769004d.vercel-dns-017.com",
-    "priority": "",
-    "ttl": 3600,
-    "proxied": false,
-    "source": "INWX zone export; preserved DNS only"
-  },
-  {
     "name": "mbo0001._domainkey.roxanna-diercks.de",
     "type": "CNAME",
     "content": "mbo0001._domainkey.mailbox.org",
