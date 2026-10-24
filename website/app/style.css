@@ -892,34 +892,45 @@
   .blog-preview h3 {
     margin-top: 0;
   }
-  .footer ul {
-    display: block;
-    padding: 2rem;
-    font-size: 1.125rem;
-    line-height: 1.5556;
+  .site-footer {
+    background: var(--color-bg);
+    color: var(--color-fg);
   }
-  .footer a:hover {
+  .site-footer :focus-visible {
+    outline-color: currentColor;
+  }
+  .footer-inner {
+    max-width: 90rem;
+    margin-inline: auto;
+    padding: 1rem clamp(1rem, 4vw, 3.5rem);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.25rem 2rem;
+    font-size: 0.75rem;
+  }
+  .footer-inner small {
+    font-size: inherit;
+  }
+  .footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.5rem;
+  }
+  .footer-legal a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+  }
+  .site-footer a:hover {
     text-decoration: underline;
+    text-underline-offset: 0.35em;
   }
   @media (width >= 40rem) {
     .contact-links {
       grid-template-columns: repeat(var(--contact-columns), minmax(0, 1fr));
       gap: 1rem;
-    }
-    .footer ul {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-    }
-    .footer li + li::before {
-      content: '|';
-      padding-inline: 0.5rem;
-    }
-  }
-  @media (width >= 48rem) {
-    .footer ul {
-      padding: 3rem;
     }
   }
   @media (width >= 64rem) {

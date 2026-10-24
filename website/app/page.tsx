@@ -115,29 +115,33 @@ export function Page(handle: Handle<{ title: string; body: RemixNode; noindex?: 
           <TopNavigation />
           <div class="site-wrapper">
             <main id="content">{p.body}</main>
-            <nav
-              class="footer"
-              aria-label={locale === 'de' ? 'Fußzeile' : 'Footer'}
+            <footer
+              class="site-footer"
               id="footer"
+              style={{ ...colorStyle(site, 'grey-green'), '--color-fg': '#fffbf5' }}
             >
-              <ul>
-                {site.navigation[locale].map((link) => (
-                  <li>
-                    <a
-                      data-rmx-document=""
-                      href={
-                        link.href === (locale === 'de' ? '/en' : '/')
-                          ? alternateLanguageHref(path, locale)
-                          : link.href
-                      }
-                    >
-                      {link.title}
-                    </a>
-                  </li>
-                ))}
-                <li>©{new Date().getUTCFullYear()} Roxanna Diercks</li>
-              </ul>
-            </nav>
+              <div class="footer-inner">
+                <small>© {new Date().getUTCFullYear()} Roxanna Diercks</small>
+                <nav aria-label={locale === 'de' ? 'Fußzeile' : 'Footer'}>
+                  <ul class="footer-legal">
+                    {site.navigation[locale].map((link) => (
+                      <li>
+                        <a
+                          data-rmx-document=""
+                          href={
+                            link.href === (locale === 'de' ? '/en' : '/')
+                              ? alternateLanguageHref(path, locale)
+                              : link.href
+                          }
+                        >
+                          {link.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              </div>
+            </footer>
           </div>
         </body>
       </html>
