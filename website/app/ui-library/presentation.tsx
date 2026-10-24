@@ -382,7 +382,7 @@ export function Image(handle: Handle<ImageProps>) {
             : {
                 width: svg ? image.width : 'auto',
                 height: 'auto',
-                maxWidth: p.maxWidth || '100%',
+                maxWidth: '100%',
                 maxHeight: p.maxHeight || undefined,
               }
         }
@@ -451,7 +451,10 @@ export function Image(handle: Handle<ImageProps>) {
                   )[p.align ?? 'center'],
                 }}
               >
-                <div class="image-position">
+                <div
+                  class="image-position"
+                  style={{ maxWidth: p.maxWidth || undefined }}
+                >
                   {img}
                   <Credit
                     image={image}

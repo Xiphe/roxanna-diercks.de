@@ -181,7 +181,7 @@ export default (
           paddingInline="0"
           rounded={'none'}
           align={'center'}
-          maxWidth={''}
+          maxWidth={'min(100%, clamp(15rem, 60vw, 27rem))'}
           maxHeight={''}
           top={true}
           bottom={true}
