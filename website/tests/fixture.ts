@@ -46,6 +46,37 @@ const site: SiteMetadata = {
     },
   },
   routes: [
+    ...(
+      [
+        ['/zwischen-den-zeilen', 'de'],
+        ['/en/between-words', 'en'],
+      ] as const
+    ).map(([path, locale]) => ({
+      path,
+      locale,
+      document: 'blog-index',
+      title: 'Blog index',
+      kind: 'page' as const,
+      createdAt: '2026-01-01',
+      updatedAt: '2026-01-01',
+    })),
+    ...(
+      [
+        ['/blog/bleiben-wenn-du-gehen-moechtest', 'de', 'Older German entry', '2026-01-02'],
+        ['/en/blog/how-to-stay-when-you-want-to-run', 'en', 'Older English entry', '2026-01-02'],
+        ['/blog/schreiben-bei-trauer', 'de', 'Newer German entry', '2026-04-23'],
+        ['/en/blog/writing-through-grief', 'en', 'Newer English entry', '2026-04-23'],
+      ] as const
+    ).map(([path, locale, title, createdAt]) => ({
+      path,
+      locale,
+      title,
+      createdAt,
+      document: 'blog-article',
+      kind: 'blog' as const,
+      updatedAt: createdAt,
+      summary: title,
+    })),
     ...(['/', '/en'] as const).map((path) => ({
       path,
       document: 'home',
@@ -98,14 +129,38 @@ export const documents: PublishedDocuments = {
       title: 'Navigation fixture',
       default: {
         type: 'fragment',
-        children: ['Trauerbegleitung', 'pricing', 'faq', 'blog', 'contact'].map((id) => ({
-          type: 'element',
-          tag: 'section',
-          props: { id },
-          children: [id],
-        })),
+        children: [
+          ...['Trauerbegleitung', 'pricing', 'faq', 'blog', 'contact'].map((id) => ({
+            type: 'element' as const,
+            tag: 'section',
+            props: { id },
+            children: [id],
+          })),
+          {
+            type: 'component',
+            from: '@roxanna/content-components',
+            import: 'Blog',
+            props: { limit: 1, sort: 'newest' },
+          },
+        ],
       },
     },
+  },
+  'blog-index': {
+    ...structuredClone(page),
+    content: {
+      title: 'Blog index',
+      default: {
+        type: 'component',
+        from: '@roxanna/content-components',
+        import: 'Blog',
+        props: { sort: 'newest' },
+      },
+    },
+  },
+  'blog-article': {
+    ...structuredClone(page),
+    content: { title: 'Blog article', default: 'Blog article' },
   },
   '404': { ...structuredClone(page), content: { title: 'Not found', default: 'Not found' } },
   _site: {

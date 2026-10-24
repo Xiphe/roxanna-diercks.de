@@ -17,11 +17,17 @@ function updateCurrentNavigation() {
     '.site-header .top-nav-links a, .site-header .top-nav-contact',
   )) {
     const target = new URL(link.href)
+    const sectionIsCurrent =
+      !!link.dataset.currentPrefix && location.pathname.startsWith(link.dataset.currentPrefix)
     const isCurrent =
       target.origin === location.origin &&
-      target.pathname === location.pathname &&
-      (!target.hash || target.hash === location.hash)
-    if (isCurrent) link.setAttribute('aria-current', target.hash ? 'location' : 'page')
+      ((target.pathname === location.pathname && (!target.hash || target.hash === location.hash)) ||
+        sectionIsCurrent)
+    if (isCurrent)
+      link.setAttribute(
+        'aria-current',
+        sectionIsCurrent ? 'true' : target.hash ? 'location' : 'page',
+      )
     else link.removeAttribute('aria-current')
   }
   for (const group of document.querySelectorAll('.top-nav-group')) {

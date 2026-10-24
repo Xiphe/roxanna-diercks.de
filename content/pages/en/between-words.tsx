@@ -26,7 +26,6 @@ export default (
         imagesOnly={false}
       >
         <Blog
-          limit={1}
           sort={'newest'}
           align={'left'}
           top={true}
@@ -84,7 +83,7 @@ export default (
           top={false}
           bottom={true}
         >
-          <h5>Thank you for sign up!</h5>
+          <p>Thank you! Your subscription is confirmed.</p>
         </Signup>
       </Column>
     </Columns>

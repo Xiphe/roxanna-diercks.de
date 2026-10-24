@@ -1,4 +1,4 @@
-import { Prose } from '@roxanna/content-components'
+import { Prose, Button } from '@roxanna/content-components'
 
 export const title = 'How to Stay When You Want to Run?'
 
@@ -13,6 +13,18 @@ export default (
         <br />
         It means not abandoning yourself when the waves come.
       </p>
+    </Prose>
+    <Prose
+      top={true}
+      bottom={true}
+    >
+      <Button
+        href={'/en/between-words'}
+        variant={'secondary'}
+        icon={'ArrowLeftIcon'}
+      >
+        Back to the blog
+      </Button>
     </Prose>
   </>
 )

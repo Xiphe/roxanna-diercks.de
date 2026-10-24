@@ -71,7 +71,7 @@ export interface SignupProps extends ProseProps {
   fields?: ('name' | 'surname')[]
 }
 export interface BlogProps extends ProseProps {
-  limit: number
+  limit?: number
   sort: 'oldest' | 'newest'
   align?: 'left' | 'center' | 'right'
 }

@@ -1,6 +1,22 @@
 import type { SignupConfig } from '../contracts/content.ts'
 
 export const signups = {
+  'writing-grief-en': {
+    id: 'writing-grief-en',
+    path: '/en/blog/writing-through-grief',
+    locale: 'en',
+    listId: 3,
+    templateId: 6,
+    fields: ['name'],
+  },
+  'between-words-de': {
+    id: 'between-words-de',
+    path: '/zwischen-den-zeilen',
+    locale: 'de',
+    listId: 9,
+    templateId: 6,
+    fields: ['name'],
+  },
   'pet-loss-de': {
     id: 'pet-loss-de',
     path: '/tiertrauer',

@@ -287,7 +287,7 @@ export default (
       >
         <Blog
           limit={1}
-          sort={'oldest'}
+          sort={'newest'}
           align={'left'}
           top={true}
           bottom={false}
@@ -302,7 +302,7 @@ export default (
               size={'normal'}
               variant={'secondary'}
             >
-              Read Blog
+              Read the blog
             </Button>
           </p>
         </Prose>

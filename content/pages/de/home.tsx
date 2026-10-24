@@ -288,7 +288,7 @@ export default (
           top={false}
           bottom={true}
         >
-          <p>Danke für dein interesse!</p>
+          <p>Danke für dein Interesse!</p>
         </Signup>
       </Column>
       <Column
@@ -296,31 +296,27 @@ export default (
         justify={'start'}
         imagesOnly={false}
       >
-        <Prose
-          top={true}
-          bottom={true}
-        >
-          <h3 style={{ textAlign: 'right' }}>Wie bleibe ich, wenn ich gehen möchte?</h3>
-          <p style={{ textAlign: 'right' }}>
-            Trauer löst häufig den Impuls aus, sich zu entziehen.
-            <br />
-            Nicht hinzusehen. Weiterzumachen.{' '}
-          </p>
-          <p style={{ textAlign: 'right' }}>
-            Doch manchmal liegt Stabilität genau darin, nicht auszuweichen.
-          </p>
-          <p style={{ textAlign: 'right' }}>
-            Diesen und weitere Gedanken teile ich in „<strong>Zwischen den Zeilen</strong>“ –<br />
-            als monatlichen Newsletter für deutschsprachige Menschen weltweit.
-          </p>
-        </Prose>
         <Blog
-          limit={3}
+          limit={1}
           sort={'newest'}
           align={'left'}
+          top={true}
+          bottom={false}
+        />
+        <Prose
           top={false}
           bottom={true}
-        />
+        >
+          <p style={{ textAlign: 'center' }}>
+            <Button
+              href={'/zwischen-den-zeilen'}
+              size={'normal'}
+              variant={'secondary'}
+            >
+              Zum Blog
+            </Button>
+          </p>
+        </Prose>
       </Column>
     </Columns>
     <Prose

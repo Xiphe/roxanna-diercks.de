@@ -7,7 +7,9 @@ export function alternateLanguageHref(path: string, locale: 'de' | 'en') {
     ['/ueber-mich', '/en/about'],
     ['/tiertrauer', '/en/pet-loss-support'],
     ['/trauer-im-unternehmen', '/en/grief-in-the-workplace'],
-    ['/#blog', '/en/between-words'],
+    ['/zwischen-den-zeilen', '/en/between-words'],
+    ['/blog/schreiben-bei-trauer', '/en/blog/writing-through-grief'],
+    ['/blog/bleiben-wenn-du-gehen-moechtest', '/en/blog/how-to-stay-when-you-want-to-run'],
   ].find((pair) => pair.includes(path))
   return pair?.[locale === 'de' ? 1 : 0] ?? (locale === 'de' ? '/en' : '/')
 }
@@ -55,11 +57,12 @@ export function TopNavigation(handle: Handle) {
         },
       ]
   const availableServices = services.filter((link) => hasRoute(link.href))
-  const links = [
+  const links: { title: string; href: string; pathPrefix?: string }[] = [
     { title: de ? 'Über mich' : 'About me', href: de ? '/ueber-mich' : '/en/about' },
     {
       title: de ? 'Blog & Newsletter' : 'Blog & newsletter',
-      href: de ? '/#blog' : '/en/between-words',
+      href: de ? '/zwischen-den-zeilen' : '/en/between-words',
+      pathPrefix: de ? '/blog/' : '/en/blog/',
     },
   ].filter((link) => hasRoute(link.href))
   const hasHome = hasRoute(home)
@@ -125,7 +128,14 @@ export function TopNavigation(handle: Handle) {
             <a
               data-rmx-document=""
               href={link.href}
-              aria-current={link.href === path ? 'page' : undefined}
+              data-current-prefix={link.pathPrefix}
+              aria-current={
+                link.href === path
+                  ? 'page'
+                  : link.pathPrefix && path.startsWith(link.pathPrefix)
+                    ? 'true'
+                    : undefined
+              }
             >
               {link.title}
             </a>

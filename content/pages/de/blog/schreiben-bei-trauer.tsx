@@ -210,7 +210,10 @@ export default (
       </p>
       <p style={{ textAlign: 'center' }}>
         Ich lese mit – und begleite Menschen in Trauer.{' '}
-        <a href={'https://roxanna-diercks.de'}>
+        <a
+          data-rmx-document=""
+          href={'/'}
+        >
           <u>
             <em>Mehr über meine Arbeit...</em>
           </u>
@@ -272,5 +275,17 @@ export default (
         </Signup>
       </Column>
     </Columns>
+    <Prose
+      top={true}
+      bottom={true}
+    >
+      <Button
+        href={'/zwischen-den-zeilen'}
+        variant={'secondary'}
+        icon={'ArrowLeftIcon'}
+      >
+        Zurück zum Blog
+      </Button>
+    </Prose>
   </>
 )

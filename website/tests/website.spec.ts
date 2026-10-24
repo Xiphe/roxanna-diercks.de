@@ -55,6 +55,38 @@ test.describe('navigation after page changes', () => {
   }
 })
 
+for (const de of [true, false]) {
+  test(`blog overview and language switch work in ${de ? 'German' : 'English'}`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 1280, height: 900 })
+    const overview = de ? '/zwischen-den-zeilen' : '/en/between-words'
+    const translatedOverview = de ? '/en/between-words' : '/zwischen-den-zeilen'
+    const newer = de ? '/blog/schreiben-bei-trauer' : '/en/blog/writing-through-grief'
+    const older = de
+      ? '/blog/bleiben-wenn-du-gehen-moechtest'
+      : '/en/blog/how-to-stay-when-you-want-to-run'
+    const translatedArticle = de ? '/en/blog/writing-through-grief' : '/blog/schreiben-bei-trauer'
+    await page.goto(overview)
+    const entries = page.locator('.blog-preview a')
+    await expect(entries).toHaveCount(2)
+    await expect(entries.nth(0)).toHaveAttribute('href', newer)
+    await expect(entries.nth(1)).toHaveAttribute('href', older)
+    const nav = page.locator('.top-nav-desktop')
+    await expect(nav.locator(`a[href="${overview}"]`)).toHaveAttribute('aria-current', 'page')
+    await expect(nav.locator('.top-nav-language')).toHaveAttribute('href', translatedOverview)
+    await entries.nth(0).click()
+    await expect(nav.locator(`a[href="${overview}"]`)).toHaveAttribute('aria-current', 'true')
+    await expect(nav.locator('.top-nav-language')).toHaveAttribute('href', translatedArticle)
+    await nav.locator('.top-nav-language').click()
+    await expect(page).toHaveURL(new RegExp(translatedArticle + '$'))
+    await page.goto(de ? '/' : '/en')
+    await expect(entries).toHaveCount(1)
+    await expect(entries.first()).toHaveAttribute('href', newer)
+    await expect(nav.locator(`a[href="${overview}"]`)).toBeVisible()
+  })
+}
+
 test('public HTML renders without JavaScript and unknown URLs return 404', async ({ browser }) => {
   const context = await browser.newContext({ javaScriptEnabled: false })
   const page = await context.newPage()

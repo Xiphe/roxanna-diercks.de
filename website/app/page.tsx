@@ -124,6 +124,7 @@ export function Page(handle: Handle<{ title: string; body: RemixNode; noindex?: 
                 {site.navigation[locale].map((link) => (
                   <li>
                     <a
+                      data-rmx-document=""
                       href={
                         link.href === (locale === 'de' ? '/en' : '/')
                           ? alternateLanguageHref(path, locale)

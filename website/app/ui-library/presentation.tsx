@@ -496,6 +496,7 @@ export const buttonCss = css({
 export function Button(handle: Handle<ButtonProps>) {
   return () => (
     <a
+      data-rmx-document=""
       class="button"
       mix={buttonCss}
       data-size={handle.props.size}
@@ -589,6 +590,7 @@ export function Blog(handle: Handle<BlogProps>) {
         >
           {entries.map((r) => (
             <a
+              data-rmx-document=""
               href={r.path}
               class="blog-link"
             >

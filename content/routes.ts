@@ -2,6 +2,54 @@ import type { ContentRoute } from '../contracts/content.ts'
 
 export const routes = [
   {
+    path: '/blog/bleiben-wenn-du-gehen-moechtest',
+    document: 'de/blog/bleiben-wenn-du-gehen-moechtest',
+    locale: 'de',
+    title: 'Wie bleibe ich, wenn ich gehen möchte?',
+    kind: 'blog',
+    description:
+      'Manchmal ist das Mutigste, bei dem zu bleiben, was wehtut. Gedanken aus dem Van bei Tarifa darüber, sich selbst nicht im Stich zu lassen, wenn die Wellen kommen.',
+    metaTitle: 'Wie bleibe ich, wenn ich gehen möchte?',
+    summary:
+      'Manchmal ist das Mutigste, nicht weiterzugehen – sondern bei dem zu bleiben, was wehtut. In meinem Van bei Tarifa habe ich gelernt: Bleiben heißt nicht, stillzustehen. Es heißt, mich selbst nicht im Stich zu lassen, wenn die Wellen kommen.',
+    noindex: false,
+    createdAt: '2026-01-02T17:00:26.526+00:00',
+    updatedAt: '2026-10-24',
+    hasContent: false,
+  },
+  {
+    path: '/en/blog/writing-through-grief',
+    document: 'en/blog/writing-through-grief',
+    locale: 'en',
+    title: 'Writing Through Grief – When Words Are Missing',
+    kind: 'blog',
+    description:
+      'Writing through grief: how to begin when words are missing. A gentle introduction to journaling after loss, with practical writing prompts and methods.',
+    metaTitle: 'Writing Through Grief: Journaling After Loss',
+    summary:
+      'Writing can be a way to approach grief without pressure or rules. A gentle introduction to journaling after loss, with practical ways to get started.',
+    noindex: false,
+    createdAt: '2026-04-23T12:22:00.416+00:00',
+    updatedAt: '2026-10-24',
+    hasContent: true,
+  },
+  {
+    path: '/zwischen-den-zeilen',
+    document: 'de/zwischen-den-zeilen',
+    locale: 'de',
+    title: 'Zwischen den Zeilen',
+    kind: 'page',
+    description:
+      'Gedanken über Trauer, Verlust und das Leben zwischen Orten. Lies den Blog oder abonniere den monatlichen Newsletter von Roxanna Diercks.',
+    metaTitle: 'Zwischen den Zeilen – Blog & Newsletter',
+    summary:
+      'Gedanken über Trauer, Verlust und das Leben zwischen Orten. Als Blog und monatlicher Brief.',
+    noindex: false,
+    createdAt: '2026-10-24',
+    updatedAt: '2026-10-24',
+    hasContent: true,
+  },
+  {
     path: '/tiertrauer',
     document: 'de/tiertrauer',
     locale: 'de',
